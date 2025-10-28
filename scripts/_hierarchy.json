@@ -1,0 +1,187 @@
+{
+    "Prisoners' Quarters": {
+        "level": 1,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Promenade of the Condemned": {
+        "level": 2,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Toxic Sewers": {
+        "level": 2,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Dilapidated Arboretum": {
+        "level": 2,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Castle's Outskirts": {
+        "level": 2,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Prison Depths": {
+        "level": 2.5,
+        "type": "optional",
+        "spoiler": false
+    },
+    "Corrupted Prison": {
+        "level": 2.5,
+        "type": "optional",
+        "spoiler": false
+    },
+    "Ramparts": {
+        "level": 3,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Ossuary": {
+        "level": 3,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Morass of the Banished": {
+        "level": 3,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Ancient Sewers": {
+        "level": 3,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Dracula's Castle (early)": {
+        "level": 3,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Black Bridge": {
+        "level": 3.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Insufferable Crypt": {
+        "level": 3.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Defiled Necropolis": {
+        "level": 3.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Nest": {
+        "level": 3.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Stilt Village": {
+        "level": 4,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Slumbering Sanctuary": {
+        "level": 4,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Fractured Shrines": {
+        "level": 4,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Graveyard": {
+        "level": 4,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Clock Tower": {
+        "level": 5,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Forgotten Sepulcher": {
+        "level": 5,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Undying Shores": {
+        "level": 5,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Cavern": {
+        "level": 5,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Clock Room": {
+        "level": 5.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Guardian's Haven": {
+        "level": 5.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Mausoleum": {
+        "level": 5.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "High Peak Castle": {
+        "level": 6,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Derelict Distillery": {
+        "level": 6,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Infested Shipwreck": {
+        "level": 6,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Dracula's Castle (late)": {
+        "level": 6,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Throne Room": {
+        "level": 6.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Master's Keep": {
+        "level": 6.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Lighthouse": {
+        "level": 6.5,
+        "type": "boss",
+        "spoiler": false
+    },
+    "Astrolab": {
+        "level": 7,
+        "type": "standard",
+        "spoiler": true
+    },
+    "The Crown": {
+        "level": 8,
+        "type": "standard",
+        "spoiler": false
+    },
+    "Observatory": {
+        "level": 8,
+        "type": "standard",
+        "spoiler": true
+    }
+}
