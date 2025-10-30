@@ -27,13 +27,13 @@ class DLCService {
         return dlcs.find(d => d.code === dlcCode)?.name;
     }
 
-    isEnabled(dlc: DLC, enabledDLCs: DLC[]): boolean {
+    isEnabled(dlc: DLC): boolean {
         if (dlc === null) return true;
-        return enabledDLCs.includes(dlc);
+        return this.enabledDlcs.has(dlc);
     }
 
-    filterByEnabledDLCs<T extends { dlc: DLC }>(items: T[], enabledDLCs: DLC[]): T[] {
-        return items.filter(item => this.isEnabled(item.dlc, enabledDLCs));
+    filterByEnabledDLCs<T extends { dlc: DLC }>(items: T[]): T[] {
+        return items.filter(item => this.isEnabled(item.dlc));
     }
 }
 
