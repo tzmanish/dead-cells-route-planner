@@ -1,10 +1,12 @@
-import type { Biome, Difficulty } from "../models/Biome";
-import { biomeServiceReference } from "../services/BiomeService";
+import type { Biome } from "../models/Biome";
 import type { BiomeService } from "../services/BiomeService";
+import { Difficulty } from "../models/Difficulty";
+import { biomeServiceReference } from "../services/BiomeService";
+import { difficultyService } from "../services/DifficultyService";
 
 let visitedBiomes: Biome[] = [];
 let biomeChoices: Biome[] = [];
-let difficulty: Difficulty = 4;
+let difficulty: Difficulty = difficultyService.getCurrent();
 
 function renderBiome(biome: Biome, service: BiomeService) {
     const button = document.createElement('button');

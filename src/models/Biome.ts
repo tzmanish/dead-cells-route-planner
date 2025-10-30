@@ -1,4 +1,5 @@
-import type { DLCType } from './dlcs.js';
+import { Difficulty } from './Difficulty.js';
+import { DLC } from './Dlc.js';
 
 // Enums for better type safety and IntelliSense
 export enum BiomeType {
@@ -16,8 +17,6 @@ export enum DoorType {
     FoodShop = "Food Shop"
 }
 
-// Biome levels as literal union for exact values
-export type Difficulty = 0 | 1 | 2 | 3 | 4;
 export type BiomeLevel = 0 | 1 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 5.5 | 6 | 6.5 | 7 | 8;
 
 export type ScrollCount = {
@@ -40,7 +39,7 @@ export interface Biome {
     readonly name: string;
     readonly wiki: string;
     readonly image: string;
-    readonly dlc: DLCType;
+    readonly dlc: DLC;
     readonly type: BiomeType;
     readonly level: BiomeLevel;
     readonly is_spoiler: boolean;
