@@ -3,18 +3,8 @@ import type { Biome, BiomeData } from '../models/Biome.js';
 class BiomeService {
     private biomeData: BiomeData;
 
-    init(): Promise<BiomeData> {
-        if(this.biomeData) return Promise.resolve(this.biomeData);
-        return fetch('/biomes.json')
-            .then(response => response.json())
-            .then (json => {
-                this.biomeData = json;
-                return this.biomeData;
-            })
-            .catch (error => {
-                console.error('Failed to load biome data:', error);
-                throw error;
-            });
+    constructor(data: BiomeData) {
+        this.biomeData = data;
     }
 
     getAllBiomes(): Biome[] {
@@ -42,4 +32,15 @@ class BiomeService {
     }
 }
 
-export const biomeService = new BiomeService();
+async function initBiomeService(): Promise<BiomeService> {
+    try {
+        const response = await fetch('/biomes.json');
+        const data: BiomeData = await response.json();
+        return new BiomeService(data);
+    } catch (error) {
+        console.error('Failed to load biome data:', error);
+        throw error;
+    }
+}
+
+export const biomeService = initBiomeService();

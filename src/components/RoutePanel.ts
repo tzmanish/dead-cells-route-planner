@@ -8,10 +8,11 @@ let difficulty: Difficulty = 4;
 function renderBiome(biome: Biome) {
     const button = document.createElement('button');
     button.textContent = biome.name;
-    button.addEventListener('click', ()=>{
+    button.addEventListener('click', async ()=>{
         visitedBiomes.push(biome);
+        const service = await biomeService;
         biomeChoices = biome.exits[difficulty]
-            .map(b => biomeService.getBiomeByName(b))
+            .map(b => service.getBiomeByName(b))
             .filter((biome): biome is Biome => biome !== undefined);
         refreshBiomes();
     });
@@ -38,8 +39,8 @@ function refreshBiomes() {
 }
 
 export function RoutePanel(): string {
-    biomeService.init().then(() => {
-        biomeChoices = biomeService.getBiomesByLevel(1);
+    biomeService.then((service) => {
+        biomeChoices = service.getBiomesByLevel(1);
         refreshBiomes();
     });
     
