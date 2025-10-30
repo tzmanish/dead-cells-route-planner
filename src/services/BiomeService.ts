@@ -1,6 +1,6 @@
 import type { Biome, BiomeData } from '../models/Biome.js';
 
-class BiomeService {
+export class BiomeService {
     private biomeData: BiomeData;
 
     constructor(data: BiomeData) {
@@ -43,4 +43,4 @@ async function initBiomeService(): Promise<BiomeService> {
     }
 }
 
-export const biomeService = initBiomeService();
+export const biomeServiceReference = initBiomeService();
