@@ -176,12 +176,12 @@
     },
     "The Crown": {
         "level": 8,
-        "type": "standard",
+        "type": "boss",
         "spoiler": false
     },
     "Observatory": {
         "level": 8,
-        "type": "standard",
+        "type": "boss",
         "spoiler": true
     }
 }

@@ -1,0 +1,7 @@
+<svg width="598" height="168" viewBox="0 0 598 168" xmlns="http://www.w3.org/2000/svg">
+  <!-- Almost invisible background, just slightly different from main dark -->
+  <rect width="598" height="168" fill="rgba(16, 21, 36, 0.95)"/>
+  
+  <!-- Barely visible subtle texture -->
+  <rect width="598" height="168" fill="rgba(0, 0, 0, 0.05)"/>
+</svg>

@@ -1,6 +1,7 @@
 import json
 from dataclasses import dataclass, field, asdict
 from typing import Dict, List, Optional
+import re
 
 @dataclass
 class Scroll:
@@ -40,6 +41,20 @@ scroll_adapter = lambda scrolls, fragments: Scroll(
     dual = next((item["amount"] for item in scrolls if item["type"] == "Dual Scrolls"), 0),
     fragment = fragments
 )
+
+def sanitize_door(door):
+    if door.strip()[:4].lower() == 'exit':
+        return f'exit: {re.split('to|the', door, flags=re.IGNORECASE)[-1].strip()}'
+    elif door.strip()[-4:].lower() == 'exit':
+        return f'exit: {door[:-5]}'
+    elif door.strip()[-3:].lower() == 'vat':
+        res = 'Cell Vat'
+    elif door.strip()[-5:].lower() == 'altar':
+        res = 'Chained Items'
+    else:
+        res = door
+    
+    return res.title()
 
 with open("scripts/_biomes.json", "r") as f:
     biomes_src = json.load(f)
@@ -89,7 +104,7 @@ for biome_src in biomes_src:
             depth3.scrolls[bc] = scroll_adapter(scrolls[:2], int(fragments.split(',')[0].split()[0]) if fragments else 0)
             depth6.scrolls[bc] = scroll_adapter(scrolls[3:5], int(fragments.split(',')[1].split()[0]) if fragments else 0)
 
-            doors = biome_src.get('doors').get(str(bc), [])
+            doors = list(map(sanitize_door, biome_src.get('doors').get(str(bc), [])))
             depth3.doors[bc] = doors
             depth6.doors[bc] = doors
         
@@ -127,7 +142,7 @@ for biome_src in biomes_src:
             fragments = biome_src.get('scroll_fragments').get(str(bc), 0)
             biome.scrolls[bc] = scroll_adapter(scrolls, int(fragments))
 
-            biome.doors[bc] = biome_src.get('doors').get(str(bc), [])
+            biome.doors[bc] = list(map(sanitize_door, biome_src.get('doors').get(str(bc), [])))
         
         biome.elites = Elite(
             obelisk = biome_src.get('elite').get('obelisk', 0), 
