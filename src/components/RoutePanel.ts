@@ -7,6 +7,7 @@ import { difficultyService } from "../services/DifficultyService";
 let visitedBiomes: Biome[] = [];
 let biomeChoices: Biome[] = [];
 let difficulty: Difficulty = difficultyService.getCurrent();
+let routePanelElement: HTMLElement | null = null;
 
 function renderBiome(biome: Biome, service: BiomeService) {
     const button = document.createElement('button');
@@ -16,37 +17,44 @@ function renderBiome(biome: Biome, service: BiomeService) {
         biomeChoices = biome.exits[difficulty]
             .map(b => service.getBiomeByName(b))
             .filter((biome): biome is Biome => biome !== undefined);
-        refreshBiomes(service);
+        if (routePanelElement) {
+            refreshBiomes(service);
+        }
     });
     button.classList.add('p-4');
     return button;
 }
 
 function refreshBiomes(service: BiomeService) {
-    const routePanelElement = document.getElementById("route-panel")
-    if (!routePanelElement) {
-        console.error('Route panel element not found');
-        return;
-    }
-    routePanelElement.innerHTML = '';
+    if(!routePanelElement) return;
+    const panel = routePanelElement; // Store in local variable for type safety
+    panel.innerHTML = '';
     visitedBiomes.forEach(biome => {
         const button = renderBiome(biome, service);
         button.disabled = true;
-        routePanelElement?.appendChild(button);
+        panel.appendChild(button);
     });
     biomeChoices.forEach(biome => {
         const button = renderBiome(biome, service);
-        routePanelElement?.appendChild(button);
+        panel.appendChild(button);
     })
 }
 
-export function RoutePanel(): string {
+export function RoutePanel(): HTMLElement {
+    const panel = document.createElement('div');
+    panel.id = 'route-panel';
+    panel.className = 'route-panel';
+    routePanelElement = panel; // Store reference for later use
+    
+    const loading = document.createElement('div');
+    loading.className = 'loading';
+    loading.textContent = 'Loading biomes...';
+    panel.appendChild(loading);
+    
     biomeServiceReference.then((service) => {
         biomeChoices = service.getBiomesByLevel(1);
         refreshBiomes(service);
     });
     
-    return `<div id="route-panel" class="route-panel">
-        <div class="loading">Loading biomes...</div>
-    </div>`;
+    return panel;
 }
