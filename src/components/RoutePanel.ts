@@ -67,24 +67,23 @@ export function resetRoutePanel() {
         const title = document.createElement('span');
         title.className = 'px-2';
         title.textContent = biome;
-        biomeDom.appendChild(title);
         
         const scrolls = biomeObj?.scrolls[difficulty];
         const scrollCount = document.createElement('span');
         scrollCount.className = 'px-2';
         scrollCount.textContent = scrolls? `${routeService.flattenCount(scrolls)} (${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments)`: 'no scrolls data';
-        biomeDom.appendChild(scrollCount);
         
         const commulativeScrollCount = document.createElement('span');
         const commulativeScrolls = routeService.scrollCount(biome);
         commulativeScrollCount.className = 'px-2';
         commulativeScrollCount.textContent = commulativeScrolls? `${routeService.flattenCount(commulativeScrolls)} (${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments)`: 'no scrolls data';
-        biomeDom.appendChild(commulativeScrollCount);
         
         const next = document.createElement('span');
         next.className = 'px-2';
         next.textContent = routeService.getNextBiome(biome)||'no way ahead';
-        biomeDom.appendChild(next);
+
+        biomeDom.appendChild(commulativeScrollCount);
+        biomeDom.replaceChildren(title, scrollCount, commulativeScrollCount, next)
     });
 }
 
