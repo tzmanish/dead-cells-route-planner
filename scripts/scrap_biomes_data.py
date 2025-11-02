@@ -79,6 +79,10 @@ while not queue.empty():
                 "scroll_fragments": {
                     int(re.search(r'\d+', div['data-source']).group()): div.find('div').get_text()
                     for div in a.find_all('div', attrs={'data-source': re.compile(r'^scroll_frags_\d+$')})
+                },
+                "cursed_chests": {
+                    int(re.search(r'\d+', div['data-source']).group()): float(div.find('div').contents[0].strip('%'))/100
+                    for div in a.find_all('div', attrs={'data-source': re.compile(r'^cursed_chests_\d+$')})
                 }
             }
 
@@ -93,9 +97,6 @@ while not queue.empty():
                     parts.append(0)
                 biome["timed_door"] = parts[0]*60 + parts[1]
 
-            cursed_chests = a.find('div', attrs = {'data-source': 'cursed_chests_0'})
-            if(cursed_chests):
-                biome["cursed_chests"] = float(cursed_chests.find('div').contents[0].strip('%'))/100
 
             wandering_elites = a.find('div', attrs = {'data-source': 'wandering_elite'})
             if(wandering_elites):

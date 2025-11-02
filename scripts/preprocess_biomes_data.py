@@ -8,6 +8,7 @@ class Scroll:
     power: int = 0
     dual: int = 0
     fragment: int = 0
+    cursed: float = 0.0
 
 @dataclass
 class Elite:
@@ -28,7 +29,6 @@ class Biome:
     scrolls: Dict[int, Scroll] = field(default_factory=dict)
     elites: Elite = field(default_factory=Elite)
     doors: Dict[int, List[str]] = field(default_factory=dict)
-    cursed_chests: float = 0.0
     timed_door: Optional[int] = None
 
 @dataclass
@@ -36,10 +36,11 @@ class Biomes:
     wiki_base: str
     biomes: List[Biome] = field(default_factory=list)
 
-scroll_adapter = lambda scrolls, fragments: Scroll(
+scroll_adapter = lambda scrolls, fragments, cursed_chests: Scroll(
     power = next((item["amount"] for item in scrolls if item["type"] == "Scrolls of Power"), 0),
     dual = next((item["amount"] for item in scrolls if item["type"] == "Dual Scrolls"), 0),
-    fragment = fragments
+    fragment = fragments,
+    cursed = cursed_chests
 )
 
 def sanitize_door(door):
@@ -101,8 +102,9 @@ for biome_src in biomes_src:
 
             scrolls = biome_src.get('scrolls').get(str(bc), [])
             fragments = biome_src.get('scroll_fragments').get(str(bc))
-            depth3.scrolls[bc] = scroll_adapter(scrolls[:2], int(fragments.split(',')[0].split()[0]) if fragments else 0)
-            depth6.scrolls[bc] = scroll_adapter(scrolls[3:5], int(fragments.split(',')[1].split()[0]) if fragments else 0)
+            cursed_chests = biome_src.get('cursed_chests').get(str(bc), 0.0)
+            depth3.scrolls[bc] = scroll_adapter(scrolls[:2], int(fragments.split(',')[0].split()[0]) if fragments else 0, cursed_chests)
+            depth6.scrolls[bc] = scroll_adapter(scrolls[3:5], int(fragments.split(',')[1].split()[0]) if fragments else 0, cursed_chests)
 
             doors = list(map(sanitize_door, biome_src.get('doors').get(str(bc), [])))
             depth3.doors[bc] = doors
@@ -115,7 +117,6 @@ for biome_src in biomes_src:
             wandering = biome_src.get('elite').get('wandering', 0)
         )
 
-        depth3.cursed_chests = depth6.cursed_chests = biome_src.get('cursed_chests')
         depth3.timed_door = depth6.timed_door = biome_src.get('timed_door')
 
         biomes.biomes.append(depth3)
@@ -140,7 +141,8 @@ for biome_src in biomes_src:
 
             scrolls = biome_src.get('scrolls').get(str(bc), [])
             fragments = biome_src.get('scroll_fragments').get(str(bc), 0)
-            biome.scrolls[bc] = scroll_adapter(scrolls, int(fragments))
+            cursed_chests = biome_src.get('cursed_chests').get(str(bc), 0.0)
+            biome.scrolls[bc] = scroll_adapter(scrolls, int(fragments), float(cursed_chests))
 
             biome.doors[bc] = list(map(sanitize_door, biome_src.get('doors').get(str(bc), [])))
         
@@ -149,7 +151,6 @@ for biome_src in biomes_src:
             wandering = biome_src.get('elite').get('wandering', 0)
         )
 
-        biome.cursed_chests = biome_src.get('cursed_chests', 0)
         biome.timed_door = biome_src.get('timed_door')
 
         biomes.biomes.append(biome)

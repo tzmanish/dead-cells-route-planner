@@ -22,6 +22,7 @@ export type ScrollCount = {
     power: number;
     dual: number;
     fragment: number;
+    cursed: number;
 }
 
 export type DifficultyMap<T> = {
@@ -50,6 +51,5 @@ export interface Biome {
         readonly wandering: number;
     };
     readonly doors: DifficultyMap<readonly DoorType[]>;
-    readonly cursed_chests: number;
     readonly timed_door: number | null;
 }

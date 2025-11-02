@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
+    "leader-line": "^1.0.8",
     "tailwindcss": "^4.1.16"
   }
 }
