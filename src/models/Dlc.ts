@@ -2,27 +2,32 @@ export const dlcs = [
     {
         "code": "FF",
         "name": "Fatal Falls",
-        "key": "FatalFalls"
+        "key": "FatalFalls",
+        "color": "#FFBE32"
     },
     {
         "code": "RotG",
         "name": "Rise of the Giant",
-        "key": "RiseOfTheGiant"
+        "key": "RiseOfTheGiant",
+        "color": "#52f1f4"
     },
     {
         "code": "RtC",
         "name": "Return to Castlevania",
-        "key": "ReturnToCastlevania"
+        "key": "ReturnToCastlevania",
+        "color": "#f02934"
     },
     {
         "code": "TBS",
         "name": "The Bad Seed",
-        "key": "TheBadSeed"
+        "key": "TheBadSeed",
+        "color": "#82C936"
     },
     {
         "code": "TQatS",
         "name": "The Queen and the Sea",
-        "key": "TheQueenAndTheSea"
+        "key": "TheQueenAndTheSea",
+        "color": "#B573E3"
     }
 ] as const;
 

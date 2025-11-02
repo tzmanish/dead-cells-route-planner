@@ -4,13 +4,13 @@
 
 @theme {
   --color-dc-dark: #101524;
+  --color-dc-header: color-mix(in srgb, var(--color-dc-dark), transparent 10%);
   --color-dc-red: #a40239;
   --color-dc-gold: #f9cf87;
   --color-dc-gold-light: #f9e6c6;
-  --color-dc-gold-dark: rgba(249, 207, 135, 0.2);
-  --color-dc-grey: #888a92;
-  --color-dc-card: rgba(0, 0, 0, 0.2);
-  --color-dc-header: rgba(16, 21, 36, 0.9);
+  --color-dc-gold-dark: color-mix(in srgb, var(--color-dc-gold), transparent 80%);
+  --color-dc-gray: #888a92;
+  --color-dc-separator: #263151;
   --font-title: "ATC Krueger Regular";
   --font-body: "Raleway", sans-serif;
   --font-heading: "ATC Krueger Regular";
@@ -43,24 +43,24 @@ strong {
 }
 
 /* Custom utility classes */
-.bg-dc-footer { background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px); }
-.shadow-dc { box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9); }
-.banner-dc {
-    @apply text-dc-gold-light;
-    background: linear-gradient(to bottom, #d1394e 50%, #cd2f46 50%);
-    border-bottom: 8px solid #832154;
+@utility bg-dc-footer { background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px); }
+@utility shadow-dc { box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9); }
+@utility banner-dc {
+    @apply text-dc-gold-light shadow-dc;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px, rgba(0,0,0,0.5) calc(100% - 12px), rgba(0,0,0,0.8)); 
 }
-.btn-dc {
-    @apply text-white hover:text-dc-gold-light font-extrabold transition-colors duration-200 flex items-center gap-2 px-4 py-2;
-    background: linear-gradient(to bottom, #d1394e 50%, #cd2f46 50%);
-    border-bottom: 8px solid #832154;
-}
-
-/* Custom form controls */
-.radio-dc {
+@utility radio-dc {
     @apply w-4 h-4 cursor-pointer accent-dc-red;
 }
-
-.checkbox-dc {
+@utility btn-dc {
+    @apply block text-center shadow-[0_0_16px_rgba(0,0,0,0.75)] py-2 px-8 border-none cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed
+}
+@utility btn-dc-primary {
+    @apply btn-dc bg-dc-red/80 text-dc-gold
+}
+@utility btn-dc-secondary {
+    @apply btn-dc bg-dc-dark/80 border-none text-dc-gray
+}
+@utility checkbox-dc {
     @apply w-4 h-4 cursor-pointer accent-dc-red;
 }

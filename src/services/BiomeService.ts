@@ -1,34 +1,53 @@
 import type { Biome, BiomeData } from '../models/Biome.js';
+import { BiomeLevel } from '../models/BiomeLevel.js';
+import type { DLC } from '../models/Dlc.js';
+import { biomeLevelService } from './BiomeLevelService.js';
 
 export class BiomeService {
-    private biomeData: BiomeData;
+    private wiki_base: string;
+    private biomeMap: Map<string, Biome>;
+    private levelMap: Map<BiomeLevel, Set<string>>;
 
     constructor(data: BiomeData) {
-        this.biomeData = data;
+        this.wiki_base = data.wiki_base;
+        this.biomeMap = new Map();
+        this.levelMap = new Map();
+        biomeLevelService.getAll().forEach(l => this.levelMap.set(l, new Set<string>()));
+        data.biomes.forEach(b=>{
+            this.biomeMap.set(b.name, b);
+            this.levelMap.get(b.level)?.add(b.name);
+        });
     }
 
-    getAllBiomes(): Biome[] {
-        return this.biomeData.biomes;
+    private getAbsoluteWikiLink(link: string): string {
+        if(link.startsWith(this.wiki_base)) return link;
+        return `${this.wiki_base}${link}`;
     }
 
-    getBiomeByName(name: string): Biome | undefined {
-        return this.biomeData.biomes.find(b => b.name === name);
+    getAllBiomes(): string[] {
+        return [...this.biomeMap.values()].map(b=>b.name);
     }
 
-    getBiomesByLevel(level: number): Biome[] {
-        return this.biomeData.biomes.filter(b => b.level === level);
+    getBiomeObject(name: string): Biome | undefined {
+        return this.biomeMap.get(name);
     }
 
-    getBiomesByDLC(dlc: string | null): Biome[] {
-        return this.biomeData.biomes.filter(b => b.dlc === dlc);
+    getBiomesByLevel(level: BiomeLevel): string[] {
+        const biomes =  this.levelMap.get(level)||new Set();
+        return [...biomes];
     }
 
-    getWikiURL(biome: Biome): string {
-        return `${this.biomeData.wiki_base}${biome.wiki}`;
+    getBiomesByDLC(dlc: DLC): string[] {
+        return [...this.biomeMap.values()].filter(b => b.dlc === dlc).map(b=>b.name);
     }
 
-    getImageURL(biome: Biome): string {
-        return `${this.biomeData.wiki_base}${biome.image}`;
+    getWikiURL(biome: string): string {
+        return this.getAbsoluteWikiLink(this.getBiomeObject(biome)?.wiki||'');
+    }
+
+    getImageURL(biome: string): string {
+        const link = this.getBiomeObject(biome)?.image;
+        return link? this.getAbsoluteWikiLink(link): `biome_placeholder.svg`;
     }
 }
 

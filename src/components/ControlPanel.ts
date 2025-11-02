@@ -13,19 +13,19 @@ interface FormState {
 
 function DifficultySelector(): HTMLElement {
   const container = document.createElement('div')
-  container.className = 'flex items-center gap-4'
+  container.className = 'flex flex-col items-start gap-1 py-2 px-6'
 
   const label = document.createElement('p')
-  label.className = 'text-dc-gold font-bold'
-  label.textContent = 'Boss Cells (BC):'
+  label.className = 'text-dc-gold text-sm text-left'
+  label.textContent = 'Boss Cells'
   container.appendChild(label)
 
   const radioContainer = document.createElement('div')
-  radioContainer.className = 'flex flex-wrap gap-2'
+  radioContainer.className = 'flex flex-row flex-wrap gap-1'
 
   difficultyService.getAll().forEach(difficulty => {
     const radioLabel = document.createElement('label')
-    radioLabel.className = 'flex items-center gap-2 cursor-pointer'
+    radioLabel.className = 'flex items-center gap-2 cursor-pointer px-1'
 
     const difficultyRadio = document.createElement('input')
     difficultyRadio.type = 'radio'
@@ -37,7 +37,7 @@ function DifficultySelector(): HTMLElement {
     }
 
     const span = document.createElement('span')
-    span.className = 'text-dc-gold-light'
+    span.className = 'text-dc-gold-light text-sm'
     span.textContent = difficultyService.getName(difficulty)
 
     radioLabel.appendChild(difficultyRadio)
@@ -51,34 +51,33 @@ function DifficultySelector(): HTMLElement {
 
 function DlcSelector(): HTMLElement {
   const container = document.createElement('div');
-  container.className = 'flex items-center gap-4'
+  container.className = 'flex flex-col items-start gap-1 py-2 px-6'
   
   const label = document.createElement('p')
-  label.className = 'text-dc-gold font-bold'
-  label.textContent = 'DLCs:'
+  label.className = 'text-dc-gold text-sm text-left'
+  label.textContent = 'DLCs'
   container.appendChild(label)
 
   const checkboxContainer = document.createElement('div')
-  checkboxContainer.className = 'flex flex-wrap gap-2'
+  checkboxContainer.className = 'flex flex-row flex-wrap gap-1'
 
   dlcService.getAll().forEach(dlc => {
-    const checkboxLabel = document.createElement('label')
-    checkboxLabel.className = 'flex items-center gap-2 cursor-pointer'
+    const checkbox = document.createElement('label')
+    checkbox.className = 'flex items-center gap-2 cursor-pointer px-1'
 
-    const checkbox = document.createElement('input')
-    checkbox.type = 'checkbox'
-    checkbox.className = 'checkbox-dc'
-    checkbox.name = 'dlc'
-    checkbox.value = dlc as string
-    checkbox.checked = dlcService.isEnabled(dlc)
+    const checkboxInput = document.createElement('input')
+    checkboxInput.type = 'checkbox'
+    checkboxInput.className = 'checkbox-dc'
+    checkboxInput.name = 'dlc'
+    checkboxInput.value = dlc as string
+    checkboxInput.checked = dlcService.isEnabled(dlc)
 
-    const span = document.createElement('span');
-    span.className = 'text-dc-gold-light';
-    span.textContent = dlcService.getName(dlc)||"";
+    const checkboxLabel = dlcService.getDom(dlc);
+    checkboxLabel.classList.add('text-sm')
 
-    checkboxLabel.appendChild(checkbox)
-    checkboxLabel.appendChild(span)
-    checkboxContainer.appendChild(checkboxLabel)
+    checkbox.appendChild(checkboxInput)
+    checkbox.appendChild(checkboxLabel)
+    checkboxContainer.appendChild(checkbox)
   })
 
   container.appendChild(checkboxContainer)
@@ -87,6 +86,7 @@ function DlcSelector(): HTMLElement {
 
 function SpoilerProtectionToggle(): HTMLElement {
   const container = document.createElement('div');
+  container.className = 'flex flex-col items-start justify-center gap-1 py-2 px-6'
   
   const label = document.createElement('label')
   label.className = 'flex items-center gap-2 cursor-pointer w-fit'
@@ -99,7 +99,7 @@ function SpoilerProtectionToggle(): HTMLElement {
   checkbox.checked = spoilerProtectionService.isEnabled()
 
   const span = document.createElement('span')
-  span.className = 'text-dc-gold font-bold'
+  span.className = 'text-dc-gold text-sm'
   span.textContent = 'Spoiler protection'
 
   label.appendChild(checkbox)
@@ -111,17 +111,17 @@ function SpoilerProtectionToggle(): HTMLElement {
 
 function ActionButtons(): HTMLElement {
   const container = document.createElement('div')
-  container.className = 'flex gap-2'
+  container.className = 'flex flex-row justify-between gap-1 py-2 px-6'
 
   const applyButton = document.createElement('button')
   applyButton.type = 'submit'
-  applyButton.className = 'px-4 py-2 bg-dc-gold text-dc-dark font-bold rounded hover:bg-dc-gold-light disabled:opacity-50 disabled:cursor-not-allowed'
+  applyButton.className = 'btn-dc-primary'
   applyButton.textContent = 'Apply'
   applyButton.disabled = true
 
   const cancelButton = document.createElement('button')
   cancelButton.type = 'button'
-  cancelButton.className = 'px-4 py-2 bg-gray-600 text-white font-bold rounded hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed'
+  cancelButton.className = 'btn-dc-secondary'
   cancelButton.textContent = 'Cancel'
   cancelButton.disabled = true
 
@@ -169,11 +169,10 @@ function hasChanges(formState: FormState, savedState: FormState): boolean {
 
 export function ControlPanel(): HTMLElement {
   const panel = document.createElement('div')
-  panel.className = 'banner-dc p-3'
-  panel.id = 'control-panel'
+  panel.className = 'p-3 banner-dc'
 
   const form = document.createElement('form')
-  form.className = 'flex flex-col gap-4'
+  form.className = 'flex flex-row flex-wrap gap-2 justify-center'
 
   const difficultySelector = DifficultySelector()
   const dlcSelector = DlcSelector()

@@ -1,5 +1,6 @@
 import { Difficulty } from './Difficulty.js';
 import { DLC } from './Dlc.js';
+import type { BiomeLevel } from './BiomeLevel.js';
 
 // Enums for better type safety and IntelliSense
 export enum BiomeType {
@@ -16,8 +17,6 @@ export enum DoorType {
     WeaponSkillShop = "Weapon/Skill Shop",
     FoodShop = "Food Shop"
 }
-
-export type BiomeLevel = 0 | 1 | 2 | 2.5 | 3 | 3.5 | 4 | 5 | 5.5 | 6 | 6.5 | 7 | 8;
 
 export type ScrollCount = {
     power: number;
