@@ -66,7 +66,7 @@ export class RouteService {
                         power : scrollCount.power + prevScrollCount.power,
                         dual : scrollCount.dual + prevScrollCount.dual,
                         fragment : scrollCount.fragment + prevScrollCount.fragment,
-                        cursed : scrollCount.cursed + prevScrollCount.cursed
+                        cursed : +(scrollCount.cursed + prevScrollCount.cursed).toFixed(2)
                     }
                     if(prefferedExit) this.nextLevelMap.set(biome.name, prefferedExit.name);
                     this.commulativeScrollCountMap.set(biome.name, scrollCount);

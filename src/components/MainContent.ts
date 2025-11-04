@@ -18,7 +18,7 @@ function createErrorDiv() {
 
 export function MainContent(): HTMLElement {
   const main = document.createElement('main')
-  main.className = 'flex-1 py-8'
+  main.className = 'flex-1'
 
   main.appendChild(ControlPanel());
 

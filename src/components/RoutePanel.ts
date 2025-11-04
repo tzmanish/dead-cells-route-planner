@@ -3,44 +3,79 @@ import { biomeLevelService } from "../services/BiomeLevelService";
 import { BiomeLevel } from "../models/BiomeLevel";
 import { RouteService } from "../services/RouteService";
 import { difficultyService } from "../services/DifficultyService";
+import { eventEmitter } from "../services/EventEmitterService";
+import { dlcService } from "../services/DLCService";
+import { BiomeType } from "../models/Biome";
+import { spoilerProtectionService } from "../services/SpoilerProtectionService";
 
-// Leader-line attaches itself to window when loaded as a script
 declare global {
     interface Window {
         LeaderLine: any;
+        AnimEvent: any;
     }
 }
 
-// Load leader-line via script tag
 function loadLeaderLine(): Promise<void> {
     return new Promise((resolve, reject) => {
-        if (window.LeaderLine) {
+        if (window.LeaderLine && window.AnimEvent) {
             resolve();
             return;
         }
         
-        const script = document.createElement('script');
-        script.src = '/node_modules/leader-line/leader-line.min.js';
-        script.onload = () => resolve();
-        script.onerror = () => reject(new Error('Failed to load LeaderLine'));
-        document.head.appendChild(script);
+        const loadScript = (src: string): Promise<void> => {
+            return new Promise((res, rej) => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onload = () => res();
+                script.onerror = () => rej(new Error(`Failed to load ${src}`));
+                document.head.appendChild(script);
+            });
+        };
+
+        Promise.all([
+            window.AnimEvent ? Promise.resolve() : loadScript('/node_modules/anim-event/anim-event.min.js'),
+            window.LeaderLine ? Promise.resolve() : loadScript('/node_modules/leader-line/leader-line.min.js')
+        ])
+        .then(() => resolve())
+        .catch(reject);
     });
 }
 
+function clearLeaderLines() {
+    svgWrapper?.remove();
+}
+
+function repositionLeaderLines(parent: HTMLElement) {
+    const rectWrapper = parent.getBoundingClientRect();
+    if(svgWrapper) svgWrapper.style.transform = `translate(${-rectWrapper.left - window.pageXOffset}px, ${-rectWrapper.top - window.pageYOffset}px)`;
+}
+
+function initLeaderLine(parent: HTMLElement) {
+    clearLeaderLines();
+    svgWrapper = document.createElement('div');
+    svgWrapper.className = 'w-0 h-0 absolute top-0 left-0'
+    parent.appendChild(svgWrapper);
+    repositionLeaderLines(parent);
+}
+
+function darkenedBackground(link: string):string {
+    return `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${link})`;
+}
+
 let routePanelElement: HTMLElement | null = null;
+let svgWrapper: HTMLElement | null = null;
 const biomeDomElements = new Map<string, HTMLElement>();
 let biomeService: BiomeService;
 let routeService: RouteService;
-let connectors:any[] = [];
 
 export function resetRoutePanel() {
     routeService.recalculate();
 
     loadLeaderLine().then(() => {
-        connectors.forEach(line=>line.remove());
-        connectors = [];
-
-        let current = biomeService.getBiomesByLevel(BiomeLevel.L1)[0];
+        if(routePanelElement) initLeaderLine(routePanelElement);
+        
+        const entryBiome = biomeService.getBiomesByLevel(BiomeLevel.L1)[0];
+        let current = entryBiome;
         let e_current = biomeDomElements.get(current);
         let next = routeService.getNextBiome(current);
         let e_next = biomeDomElements.get(next||"");
@@ -49,13 +84,28 @@ export function resetRoutePanel() {
             const line = new window.LeaderLine(
                 e_current, 
                 e_next,
-                {startSocket: 'bottom', endSocket: 'top', color: '#f9cf87', size: 1.2}
+                {startSocket: 'bottom', endSocket: 'top', color: '#f9cf87', size: 1.2, path: 'grid'}
             );
-            connectors.push(line);
+
+            const elmLine = document.querySelector('body > .leader-line:last-child');
+            if (elmLine && svgWrapper) {
+                svgWrapper.appendChild(elmLine);
+            }
+
+            e_current?.parentElement?.addEventListener('scroll', window.AnimEvent.add(() =>  line.position()), false);
+            e_next?.parentElement?.addEventListener('scroll', window.AnimEvent.add(() =>  line.position()), false);
+            eventEmitter.on('route-panel-reset', ()=>{
+                e_current?.parentElement?.removeEventListener('scroll', window.AnimEvent.add(() =>  line.position()));
+                e_next?.parentElement?.removeEventListener('scroll', window.AnimEvent.add(() =>  line.position()));
+            });
+
+            e_next?.scrollIntoView();
+
             e_current = e_next;
             next = routeService.getNextBiome(next);
             e_next = biomeDomElements.get(next||"");
         }
+        window.scrollTo(0, 0);
     }).catch(err => {
         console.error('Failed to load or use LeaderLine:', err);
     });
@@ -64,31 +114,73 @@ export function resetRoutePanel() {
         const biomeObj = biomeService.getBiomeObject(biome);
         const difficulty = difficultyService.getCurrent();
 
-        const title = document.createElement('span');
-        title.className = 'px-2';
-        title.textContent = biome;
+        const title = document.createElement('h2');
+        title.className = 'font-bold text-lg';
+        title.textContent = biomeObj? spoilerProtectionService.mask(biomeObj).name: biome;
+
+        
+        const wiki = document.createElement('a')
+        wiki.className = 'link-dc ml-1 icon-[majesticons--open]';
+        wiki.href = biomeService.getWikiURL(biome);
+        wiki.target = '_blank';
+        title.appendChild(wiki)
         
         const scrolls = biomeObj?.scrolls[difficulty];
         const scrollCount = document.createElement('span');
-        scrollCount.className = 'px-2';
-        scrollCount.textContent = scrolls? `${routeService.flattenCount(scrolls)} (${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments)`: 'no scrolls data';
+        const scrollIcon = document.createElement('span');
+        scrollIcon.className = 'icon-[majesticons--scroll]';
+        const scrollLabel = document.createElement('span');
+        scrollLabel.textContent = scrolls? `${Math.floor(routeService.flattenCount(scrolls))}`: '-';
+        scrollCount.title = "Scrolls in this Level: " + (scrolls? `${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments`: 'data unavailable');
+        scrollCount.replaceChildren(scrollIcon, scrollLabel);
         
-        const commulativeScrollCount = document.createElement('span');
         const commulativeScrolls = routeService.scrollCount(biome);
+        const commulativeScrollCount = document.createElement('span');
+        const commulativeScrollIcon = document.createElement('span');
+        commulativeScrollIcon.className = 'icon-[majesticons--scroll-text]';
+        const commulativeScrollLabel = document.createElement('span');
+        commulativeScrollLabel.textContent = commulativeScrolls? `${Math.floor(routeService.flattenCount(commulativeScrolls))}`: '-';
         commulativeScrollCount.className = 'px-2';
-        commulativeScrollCount.textContent = commulativeScrolls? `${routeService.flattenCount(commulativeScrolls)} (${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments)`: 'no scrolls data';
+        commulativeScrollCount.title = "Scrolls in this Route: " + (commulativeScrolls? `${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments`: 'data unavailable');
+        commulativeScrollCount.replaceChildren(commulativeScrollIcon, commulativeScrollLabel);
+
+        const icons = document.createElement('div');
+        icons.className = 'absolute top-0 left-0 m-1 flex';
+        const tags = document.createElement('div');
+        tags.className = 'absolute top-0 right-0 flex'
+
+        const dlc = biomeObj!.dlc || null;
+        if(dlc !== null) {
+            const dlcDom = dlcService.getDom(dlc);
+            dlcDom.classList.add('text-xs', 'bg-black', 'px-2');
+            tags.appendChild(dlcDom);
+        }
         
-        const next = document.createElement('span');
-        next.className = 'px-2';
-        next.textContent = routeService.getNextBiome(biome)||'no way ahead';
+        const type = biomeObj?.type ||  BiomeType.Standard;
+        if(type == BiomeType.Boss) {
+            const typeDom = document.createElement('span');
+            typeDom.className = 'icon-[majesticons--skull] bg-dc-red';
+            typeDom.title = 'Boss';
+            icons.appendChild(typeDom);
+        }
 
-        biomeDom.appendChild(commulativeScrollCount);
-        biomeDom.replaceChildren(title, scrollCount, commulativeScrollCount, next)
+        if(dlcService.isDisabled(dlc)) {
+            const dlcStatus = document.createElement('span');
+            dlcStatus.className = 'icon-[majesticons--lock] bg-dc-red';
+            dlcStatus.title = 'Locked DLC'
+            icons.appendChild(dlcStatus);
+        }
+        
+        biomeDom.replaceChildren(
+            tags, 
+            icons, 
+            title, 
+            scrollCount, 
+            commulativeScrollCount
+        );
     });
-}
 
-function darkenedBackground(link: string):string {
-    return `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${link})`;
+    eventEmitter.emit('route-panel-reset');
 }
 
 function createBiomeDom(biome: string): HTMLElement {
@@ -100,12 +192,13 @@ function createBiomeDom(biome: string): HTMLElement {
     const placeholderUrl = '/biome_placeholder.svg';
     const actualUrl = biomeService.getImageURL(biome);
     biomeDom.className = `
-        p-2 inline-block bg-center bg-no-repeat z-10
+        p-2 inline-block relative bg-center bg-no-repeat z-10
         cursor-pointer active:outline-2 
         bg-[length:100%_100%] hover:bg-[length:110%_110%] transition-[background-size] duration-400 ease-out
     `;
     biomeDom.style.height = `${height}px`;
     biomeDom.style.width = `${width}px`;
+    biomeDom.style.minWidth = `${width}px`;
     biomeDom.style.backgroundImage = `url(${placeholderUrl})`;
 
     const img = new Image();
@@ -117,41 +210,30 @@ function createBiomeDom(biome: string): HTMLElement {
 
 function createLevelDom(level: BiomeLevel): HTMLElement {
     const levelDom = document.createElement('div');
-    levelDom.className = `
-        border-dashed border-dc-separator 
-        py-8 relative
-        flex flex-wrap justify-center gap-4`; 
+    levelDom.className = 'border-dashed border-dc-separator py-8 relative'; 
     if(level != BiomeLevel.L1) levelDom.classList.add('border-t-1');
 
     const levelName = document.createElement('span');
     levelName.innerHTML = biomeLevelService.getName(level);
-    levelName.className = `
-        absolute left-0 bottom-0
-        text-sm font-bold text-dc-separator text-center
-        -rotate-90 origin-bottom-left hiddener
-    `;
-
-    new ResizeObserver(() => {
-        const parentHeight = levelDom.offsetHeight;
-        levelName.style.width = `${parentHeight}px`;
-        levelName.classList.remove('hidden');
-    }).observe(levelDom);
+    levelName.className = 'absolute left-0 top-0 text-sm font-bold text-dc-separator';
         
     levelDom.appendChild(levelName);
 
+    const biomes = document.createElement('div');
+    biomes.className = 'overflow-x-auto flex justify-center-safe gap-4';
     biomeService.getBiomesByLevel(level).forEach(b => {
         const biomeDom = biomeDomElements.get(b);
-        if (biomeDom) {
-            levelDom.appendChild(biomeDom);
-        }
+        if (biomeDom) biomes.appendChild(biomeDom);
     });
+
+    levelDom.appendChild(biomes);
     return levelDom;
 }
 
 export function RoutePanel(_biomeService: BiomeService): HTMLElement {
     const panel = document.createElement('div');
     routePanelElement = panel;
-    routePanelElement.className = 'px-8'
+    routePanelElement.className = 'p-4 relative overflow-hidden';
     
     biomeService = _biomeService;
     routeService = new RouteService(biomeService);
@@ -160,7 +242,9 @@ export function RoutePanel(_biomeService: BiomeService): HTMLElement {
         const levelDom = createLevelDom(l);
         routePanelElement?.appendChild(levelDom);
     });
-
+    
     resetRoutePanel();
+    eventEmitter.on('control-panel-reset', resetRoutePanel);
+    window.onresize = () => repositionLeaderLines(routePanelElement!);
     return panel;
 }

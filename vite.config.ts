@@ -6,6 +6,6 @@ export default defineConfig({
     tailwindcss(),
   ],
   optimizeDeps: {
-    exclude: ['leader-line']
+    exclude: ['leader-line', 'anim-event']
   }
 })

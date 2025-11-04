@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@iconify/json": "^2.2.402",
+    "@iconify/tailwind4": "^1.0.6",
     "typescript": "~5.9.3",
     "vite": "npm:rolldown-vite@7.1.14"
   },
@@ -17,6 +19,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
+    "anim-event": "^1.0.17",
     "leader-line": "^1.0.8",
     "tailwindcss": "^4.1.16"
   }

@@ -3,12 +3,47 @@ import { dlcService } from "../services/DLCService"
 import { Difficulty } from "../models/Difficulty"
 import { DLC } from "../models/Dlc"
 import { spoilerProtectionService } from "../services/SpoilerProtectionService"
-import { resetRoutePanel } from "./RoutePanel"
+import { eventEmitter } from "../services/EventEmitterService"
 
 interface FormState {
   difficulty: Difficulty
   dlcs: Set<DLC>
   spoilerProtection: boolean
+}
+
+function getFormState(form: HTMLFormElement): FormState {
+  const formData = new FormData(form)
+  
+  const difficulty = parseInt(formData.get('boss-cell') as string) as Difficulty
+  
+  const dlcs = new Set<DLC>()
+  formData.getAll('dlc').forEach(dlc => {
+    dlcs.add(dlc as DLC)
+  })
+
+  const spoilerProtection = formData.get('spoiler-protection') === 'on'
+
+  return { difficulty, dlcs, spoilerProtection }
+}
+
+function getSavedState(): FormState {
+  return {
+    difficulty: difficultyService.getCurrent(),
+    dlcs: new Set(dlcService.getEnabled()),
+    spoilerProtection: spoilerProtectionService.isEnabled()
+  }
+}
+
+function hasChanges(formState: FormState, savedState: FormState): boolean {
+  if (formState.difficulty !== savedState.difficulty) return true
+  if (formState.spoilerProtection !== savedState.spoilerProtection) return true
+  
+  if (formState.dlcs.size !== savedState.dlcs.size) return true
+  for (const dlc of formState.dlcs) {
+    if (!savedState.dlcs.has(dlc)) return true
+  }
+  
+  return false
 }
 
 function DifficultySelector(): HTMLElement {
@@ -109,7 +144,7 @@ function SpoilerProtectionToggle(): HTMLElement {
   return container;
 }
 
-function ActionButtons(): HTMLElement {
+function ActionButtons(form: HTMLFormElement): HTMLElement {
   const container = document.createElement('div')
   container.className = 'flex flex-row justify-between gap-1 py-2 px-6'
 
@@ -125,46 +160,41 @@ function ActionButtons(): HTMLElement {
   cancelButton.textContent = 'Cancel'
   cancelButton.disabled = true
 
-  container.appendChild(applyButton)
-  container.appendChild(cancelButton)
+  const updateButtonStates = () => {
+    const formState = getFormState(form)
+    const savedState = getSavedState()
+    const changed = hasChanges(formState, savedState)
+    applyButton.disabled = !changed
+    cancelButton.disabled = !changed
+  };
 
-  return container
-}
+  form.addEventListener('change', updateButtonStates);
+  eventEmitter.on('control-panel-reset', updateButtonStates);
 
-function getFormState(form: HTMLFormElement): FormState {
-  const formData = new FormData(form)
-  
-  const difficulty = parseInt(formData.get('boss-cell') as string) as Difficulty
-  
-  const dlcs = new Set<DLC>()
-  formData.getAll('dlc').forEach(dlc => {
-    dlcs.add(dlc as DLC)
+  cancelButton.addEventListener('click', () => {
+    const savedState = getSavedState();
+
+    const difficultyRadios = form.querySelectorAll('input[name="boss-cell"]')
+    difficultyRadios.forEach(radio => {
+      const input = radio as HTMLInputElement
+      input.checked = parseInt(input.value) === savedState.difficulty
+    });
+    
+    const dlcCheckboxes = form.querySelectorAll('input[name="dlc"]')
+    dlcCheckboxes.forEach(checkbox => {
+      const input = checkbox as HTMLInputElement
+      input.checked = savedState.dlcs.has(input.value as DLC)
+    });
+    
+    const spoilerCheckbox = form.querySelector('input[name="spoiler-protection"]') as HTMLInputElement;
+    spoilerCheckbox.checked = savedState.spoilerProtection;
+    
+    updateButtonStates();
   })
 
-  const spoilerProtection = formData.get('spoiler-protection') === 'on'
-
-  return { difficulty, dlcs, spoilerProtection }
-}
-
-function getSavedState(): FormState {
-  return {
-    difficulty: difficultyService.getCurrent(),
-    dlcs: new Set(dlcService.getEnabled()),
-    spoilerProtection: spoilerProtectionService.isEnabled()
-  }
-}
-
-function hasChanges(formState: FormState, savedState: FormState): boolean {
-  if (formState.difficulty !== savedState.difficulty) return true
-  if (formState.spoilerProtection !== savedState.spoilerProtection) return true
-  
-  // Check DLC changes
-  if (formState.dlcs.size !== savedState.dlcs.size) return true
-  for (const dlc of formState.dlcs) {
-    if (!savedState.dlcs.has(dlc)) return true
-  }
-  
-  return false
+  container.appendChild(applyButton)
+  container.appendChild(cancelButton)
+  return container
 }
 
 export function ControlPanel(): HTMLElement {
@@ -177,82 +207,29 @@ export function ControlPanel(): HTMLElement {
   const difficultySelector = DifficultySelector()
   const dlcSelector = DlcSelector()
   const spoilerToggle = SpoilerProtectionToggle()
-  const actionButtons = ActionButtons()
+  const actionButtons = ActionButtons(form)
 
   form.appendChild(difficultySelector)
   form.appendChild(dlcSelector)
   form.appendChild(spoilerToggle)
   form.appendChild(actionButtons)
 
-  // Get button references
-  const applyButton = actionButtons.querySelector('button[type="submit"]') as HTMLButtonElement
-  const cancelButton = actionButtons.querySelector('button[type="button"]') as HTMLButtonElement
-
-  // Update button states
-  function updateButtonStates() {
-    const formState = getFormState(form)
-    const savedState = getSavedState()
-    const changed = hasChanges(formState, savedState)
-    
-    applyButton.disabled = !changed
-    cancelButton.disabled = !changed
-  }
-
-  // Listen to form changes
-  form.addEventListener('change', updateButtonStates)
-
-  // Handle form submission
   form.addEventListener('submit', (e) => {
-    e.preventDefault()
-    
-    const formState = getFormState(form)
-    
-    // Apply difficulty
-    difficultyService.set(formState.difficulty)
-    
-    // Apply DLCs
+    e.preventDefault();
+
+    const formState = getFormState(form);
+    difficultyService.set(formState.difficulty);
     dlcService.getAll().forEach(dlc => {
       if (formState.dlcs.has(dlc)) {
         dlcService.enable(dlc)
       } else {
         dlcService.disable(dlc)
       }
-    })
-    
-    // Apply spoiler setting
+    });
     formState.spoilerProtection? spoilerProtectionService.enable(): spoilerProtectionService.disable();
     
     console.log('Settings applied:', formState)
-    
-    // Reset the route panel with new settings
-    resetRoutePanel()
-    
-    updateButtonStates()
-  })
-
-  // Handle cancel
-  cancelButton.addEventListener('click', () => {
-    const savedState = getSavedState()
-    
-    // Reset difficulty
-    const difficultyRadios = form.querySelectorAll('input[name="boss-cell"]')
-    difficultyRadios.forEach(radio => {
-      const input = radio as HTMLInputElement
-      input.checked = parseInt(input.value) === savedState.difficulty
-    })
-    
-    // Reset DLCs
-    const dlcCheckboxes = form.querySelectorAll('input[name="dlc"]')
-    dlcCheckboxes.forEach(checkbox => {
-      const input = checkbox as HTMLInputElement
-      input.checked = savedState.dlcs.has(input.value as DLC)
-    })
-    
-    // Reset spoilers
-    const spoilerCheckbox = form.querySelector('input[name="spoiler-protection"]') as HTMLInputElement
-    spoilerCheckbox.checked = savedState.spoilerProtection
-    
-    updateButtonStates()
+    eventEmitter.emit('control-panel-reset', formState);
   })
 
   panel.appendChild(form)

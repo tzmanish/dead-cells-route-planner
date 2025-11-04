@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
 @import url('https://db.onlinewebfonts.com/c/4d6681df325afc094d09fb15e59aed2f?family=ATC+Krueger+Regular');
+@plugin "@iconify/tailwind4";
 @import "tailwindcss";
 
 @theme {
@@ -20,46 +21,29 @@ body {
     @apply text-dc-gold bg-dc-dark font-body;
 }
 
-h2 {
-    @apply font-heading font-bold text-6xl;
-}
-
-h3 {
-    @apply font-body text-2xl;
-}
-
-a {
-    @apply text-dc-gold;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-a:hover {
-    @apply text-dc-gold-light;
-}
-
-strong {
-    @apply text-dc-red;
-}
-
 /* Custom utility classes */
 @utility bg-dc-footer { background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px); }
 @utility shadow-dc { box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9); }
 @utility banner-dc {
-    @apply text-dc-gold-light shadow-dc;
+    @apply text-dc-gold-light;
     background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px, rgba(0,0,0,0.5) calc(100% - 12px), rgba(0,0,0,0.8)); 
 }
 @utility radio-dc {
     @apply w-4 h-4 cursor-pointer accent-dc-red;
 }
+@utility link-dc {
+    @apply text-dc-gold hover:text-dc-gold-light hover:underline;
+    text-decoration: none;
+    transition: color 0.2s;
+}
 @utility btn-dc {
-    @apply block text-center shadow-[0_0_16px_rgba(0,0,0,0.75)] py-2 px-8 border-none cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed
+    @apply block text-center shadow-[0_0_16px_rgba(0,0,0,0.75)] py-2 px-12 border-none cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed
 }
 @utility btn-dc-primary {
     @apply btn-dc bg-dc-red/80 text-dc-gold
 }
 @utility btn-dc-secondary {
-    @apply btn-dc bg-dc-dark/80 border-none text-dc-gray
+    @apply btn-dc bg-dc-dark/80 border-none text-white
 }
 @utility checkbox-dc {
     @apply w-4 h-4 cursor-pointer accent-dc-red;
