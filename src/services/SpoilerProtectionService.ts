@@ -1,10 +1,25 @@
 import type { Biome } from "../models/Biome";
+import { localStorageService } from "./LocalStorageService.js";
 
 class SpoilerProtectionService {
-    private spoilerProtectionEnabled: boolean;
+    private spoilerProtectionEnabled!: boolean;
 
     constructor() {
-        this.spoilerProtectionEnabled = true;
+        this.loadFromStorage();
+    }
+
+    private loadFromStorage() {
+        const stored = localStorageService.loadSpoilerProtection();
+        if (stored !== null) {
+            this.spoilerProtectionEnabled = stored;
+        } else {
+            // Default: enabled
+            this.spoilerProtectionEnabled = true;
+        }
+    }
+
+    private saveToStorage() {
+        localStorageService.saveSpoilerProtection(this.spoilerProtectionEnabled);
     }
 
     public isEnabled(): boolean {
@@ -14,12 +29,15 @@ class SpoilerProtectionService {
     public isDisabled(): boolean {
         return !this.spoilerProtectionEnabled;
     }
+
     public enable() {
         this.spoilerProtectionEnabled = true;
+        this.saveToStorage();
     }
 
     public disable() {
         this.spoilerProtectionEnabled = false;
+        this.saveToStorage();
     }
 
     public mask(biome: Biome) : Biome {

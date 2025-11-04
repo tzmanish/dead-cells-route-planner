@@ -1,20 +1,38 @@
 import { DLC, dlcs } from '../models/Dlc.js';
+import { localStorageService } from './LocalStorageService.js';
 
 class DLCService {
-    private enabledDlcs: Set<DLC>;
+    private enabledDlcs!: Set<DLC>;
 
     constructor() {
-        this.enabledDlcs = new Set(this.getAll());
+        this.loadFromStorage();
+    }
+
+    private loadFromStorage() {
+        const stored = localStorageService.loadEnabledDLCs();
+        if (stored !== null) {
+            this.enabledDlcs = new Set(stored as DLC[]);
+        } else {
+            // Default: all DLCs enabled
+            this.enabledDlcs = new Set(this.getAll());
+        }
+    }
+
+    private saveToStorage() {
+        const dlcArray = [...this.enabledDlcs].filter(dlc => dlc !== null) as string[];
+        localStorageService.saveEnabledDLCs(dlcArray);
     }
 
     enable(dlc: DLC) {
         if(dlc === null) return;
         this.enabledDlcs.add(dlc);
+        this.saveToStorage();
     }
     
     disable(dlc: DLC) {
         if(dlc === null) return;
         this.enabledDlcs.delete(dlc);
+        this.saveToStorage();
     }
 
     getAll(): DLC[] {
