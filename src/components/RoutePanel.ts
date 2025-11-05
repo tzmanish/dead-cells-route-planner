@@ -189,7 +189,7 @@ function createBiomeDom(biome: string): HTMLElement {
     const width = height * placeholderAspect;
 
     const biomeDom = document.createElement('button');
-    const placeholderUrl = '/biome_placeholder.svg';
+    const placeholderUrl = `${import.meta.env.BASE_URL}biome_placeholder.svg`;
     const actualUrl = biomeService.getImageURL(biome);
     biomeDom.className = `
         p-2 inline-block relative bg-center bg-no-repeat z-10

@@ -47,13 +47,13 @@ export class BiomeService {
 
     getImageURL(biome: string): string {
         const link = this.getBiomeObject(biome)?.image;
-        return link? this.getAbsoluteWikiLink(link): `biome_placeholder.svg`;
+        return link? this.getAbsoluteWikiLink(link): `${import.meta.env.BASE_URL}biome_placeholder.svg`;
     }
 }
 
 async function initBiomeService(): Promise<BiomeService> {
     try {
-        const response = await fetch('/biomes.json');
+        const response = await fetch(import.meta.env.BASE_URL + 'biomes.json');
         const data: BiomeData = await response.json();
         return new BiomeService(data);
     } catch (error) {
