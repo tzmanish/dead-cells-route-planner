@@ -26,3 +26,7 @@ dist-ssr
 # Intermediate scrapped files
 scripts/_scrap
 scripts/_biomes.json
+
+# Copied library files
+public/anim-event.min.js
+public/leader-line.min.js

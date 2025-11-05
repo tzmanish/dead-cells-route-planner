@@ -33,8 +33,8 @@ function loadLeaderLine(): Promise<void> {
         };
 
         Promise.all([
-            window.AnimEvent ? Promise.resolve() : loadScript('/node_modules/anim-event/anim-event.min.js'),
-            window.LeaderLine ? Promise.resolve() : loadScript('/node_modules/leader-line/leader-line.min.js')
+            window.AnimEvent ? Promise.resolve() : loadScript(`${import.meta.env.BASE_URL}anim-event.min.js`),
+            window.LeaderLine ? Promise.resolve() : loadScript(`${import.meta.env.BASE_URL}leader-line.min.js`)
         ])
         .then(() => resolve())
         .catch(reject);

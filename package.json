@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "cp node_modules/anim-event/anim-event.min.js public/ && cp node_modules/leader-line/leader-line.min.js public/",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
