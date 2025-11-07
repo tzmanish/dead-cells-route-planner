@@ -53,7 +53,7 @@ function repositionLeaderLines(parent: HTMLElement) {
 function initLeaderLine(parent: HTMLElement) {
     clearLeaderLines();
     svgWrapper = document.createElement('div');
-    svgWrapper.className = 'w-0 h-0 absolute top-0 left-0'
+    svgWrapper.className = 'w-0 h-0 absolute top-0 left-0 z-100'
     parent.appendChild(svgWrapper);
     repositionLeaderLines(parent);
 }
