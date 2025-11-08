@@ -38,4 +38,4 @@ body {
 @utility btn-dc-primary { @apply btn-dc bg-dc-red/80 text-dc-gold; }
 @utility btn-dc-secondary { @apply btn-dc bg-dc-dark/80 border-none text-white; }
 @utility checkbox-dc { @apply w-4 h-4 cursor-pointer accent-dc-red; }
-@utility has-info { @apply border-b border-dotted border-b-[1px] leading-none; }
+@utility has-info { @apply hover:border-b border-dotted leading-none; }

@@ -143,7 +143,7 @@ export function resetRoutePanel() {
         title.replaceChildren(biomeName, wiki);
         
         const props = document.createElement('div');
-        props.className = 'flex gap-2';
+        props.className = 'flex gap-2 text-base';
 
         const scrolls = biomeObj?.scrolls[difficulty];
         const scrollCount = document.createElement('span');
@@ -151,9 +151,9 @@ export function resetRoutePanel() {
         scrollIcon.className = 'icon-[majesticons--scroll]';
         const scrollLabel = document.createElement('span');
         scrollLabel.textContent = scrolls? `${Math.floor(routeService.flattenCount(scrolls))}`: '-';
-        scrollCount.className = 'text-sm has-info';
+        scrollLabel.className = 'has-info';
         scrollCount.replaceChildren(scrollIcon, scrollLabel);
-        scrollCount.addEventListener('mouseover', ()=>showPopper(scrollCount, "Scrolls in this Level: " + (scrolls? `${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments`: 'data unavailable')));
+        scrollLabel.addEventListener('mouseover', ()=>showPopper(scrollLabel, `Scrolls in ${biome}: ${(scrolls? `${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments`: 'data unavailable')}`));
         
         const commulativeScrolls = routeService.scrollCount(biome);
         const commulativeScrollCount = document.createElement('span');
@@ -161,9 +161,9 @@ export function resetRoutePanel() {
         commulativeScrollIcon.className = 'icon-[majesticons--scroll-text]';
         const commulativeScrollLabel = document.createElement('span');
         commulativeScrollLabel.textContent = commulativeScrolls? `${Math.floor(routeService.flattenCount(commulativeScrolls))}`: '-';
-        commulativeScrollCount.className = 'text-sm has-info';
+        commulativeScrollLabel.className = 'has-info';
         commulativeScrollCount.replaceChildren(commulativeScrollIcon, commulativeScrollLabel);
-        commulativeScrollCount.addEventListener('mouseover', ()=>showPopper(commulativeScrollCount, "Scrolls in this Route: " + (commulativeScrolls? `${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments`: 'data unavailable')));
+        commulativeScrollLabel.addEventListener('mouseover', ()=>showPopper(commulativeScrollLabel, `Scrolls in this Route: ${(commulativeScrolls? `${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments`: 'data unavailable')}`));
 
         props.replaceChildren(scrollCount, commulativeScrollCount);
 
