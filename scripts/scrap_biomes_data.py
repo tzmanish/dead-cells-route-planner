@@ -57,8 +57,9 @@ while not queue.empty():
         if a:
             biome = { 
                 "name": a.find('h2').get_text(),
-                "wiki": url,
-                "image": urlunsplit((*urlsplit([u.split()[0] for u in a.img['srcset'].split(',') if '2x' in u][0])[:3], '', '')),
+                "description": [item.get_text().strip() for item in soup.find_all("div", class_="hslider__item")],
+                "wiki": f'{base_url}{url}',
+                "image": f'https://deadcells.wiki.gg/images/{soup.find("img", class_="pi-image-thumbnail")["src"].split("-", 1)[-1]}',
                 "entrances": {
                     int(re.search(r'\d+', div['data-source']).group()): [entrance.get_text(strip=True) for entrance in div.find_all('a') if entrance.get_text(strip=True) not in blacklist]
                     for div in a.find_all('div', attrs={'data-source': re.compile(r'^entrance_\d+$')})

@@ -29,16 +29,11 @@ export type DifficultyMap<T> = {
     [K in Difficulty]: T;
 };
 
-// JSON structure from the external file
-export interface BiomeData {
-    wiki_base: string;
-    biomes: Biome[];
-}
-
 export interface Biome {
     readonly name: string;
     readonly wiki: string;
     readonly image: string;
+    readonly desc: string[];
     readonly dlc: DLC;
     readonly type: BiomeType;
     readonly level: BiomeLevel;

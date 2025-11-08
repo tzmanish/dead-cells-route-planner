@@ -7,6 +7,7 @@ import { eventEmitter } from "../services/EventEmitterService";
 import { dlcService } from "../services/DLCService";
 import { BiomeType } from "../models/Biome";
 import { spoilerProtectionService } from "../services/SpoilerProtectionService";
+import { reposition } from 'nanopop';
 
 declare global {
     interface Window {
@@ -67,6 +68,16 @@ let svgWrapper: HTMLElement | null = null;
 const biomeDomElements = new Map<string, HTMLElement>();
 let biomeService: BiomeService;
 let routeService: RouteService;
+let popper: HTMLElement;
+
+function showPopper(element: HTMLElement, textContent: string) {
+    popper.textContent = textContent;
+    reposition(element, popper, { position:'bottom' });
+    popper.hidden = false;
+    element.addEventListener('mouseleave', ()=>{
+        popper.hidden = true;
+    });
+}
 
 export function resetRoutePanel() {
     routeService.recalculate();
@@ -114,25 +125,35 @@ export function resetRoutePanel() {
         const biomeObj = biomeService.getBiomeObject(biome);
         const difficulty = difficultyService.getCurrent();
 
+
         const title = document.createElement('h2');
         title.className = 'font-bold text-lg';
-        title.textContent = biomeObj? spoilerProtectionService.mask(biomeObj).name: biome;
 
-        
-        const wiki = document.createElement('a')
+        const biomeName = document.createElement('span');
+        biomeName.className = 'has-info';
+        biomeName.textContent = biomeObj? spoilerProtectionService.mask(biomeObj).name: biome;
+        biomeName.addEventListener('mouseover', ()=>showPopper(biomeName, biomeObj?.desc[Math.floor(Math.random() * biomeObj.desc.length)]||biome));
+
+        const wiki = document.createElement('a');
         wiki.className = 'link-dc ml-1 icon-[majesticons--open]';
         wiki.href = biomeService.getWikiURL(biome);
+        wiki.title = 'wiki';
         wiki.target = '_blank';
-        title.appendChild(wiki)
         
+        title.replaceChildren(biomeName, wiki);
+        
+        const props = document.createElement('div');
+        props.className = 'flex gap-2';
+
         const scrolls = biomeObj?.scrolls[difficulty];
         const scrollCount = document.createElement('span');
         const scrollIcon = document.createElement('span');
         scrollIcon.className = 'icon-[majesticons--scroll]';
         const scrollLabel = document.createElement('span');
         scrollLabel.textContent = scrolls? `${Math.floor(routeService.flattenCount(scrolls))}`: '-';
-        scrollCount.title = "Scrolls in this Level: " + (scrolls? `${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments`: 'data unavailable');
+        scrollCount.className = 'text-sm has-info';
         scrollCount.replaceChildren(scrollIcon, scrollLabel);
+        scrollCount.addEventListener('mouseover', ()=>showPopper(scrollCount, "Scrolls in this Level: " + (scrolls? `${scrolls.power} Power + ${scrolls.cursed} Cursed + ${scrolls.dual} Dual + ${scrolls.fragment} Fragments`: 'data unavailable')));
         
         const commulativeScrolls = routeService.scrollCount(biome);
         const commulativeScrollCount = document.createElement('span');
@@ -140,9 +161,11 @@ export function resetRoutePanel() {
         commulativeScrollIcon.className = 'icon-[majesticons--scroll-text]';
         const commulativeScrollLabel = document.createElement('span');
         commulativeScrollLabel.textContent = commulativeScrolls? `${Math.floor(routeService.flattenCount(commulativeScrolls))}`: '-';
-        commulativeScrollCount.className = 'px-2';
-        commulativeScrollCount.title = "Scrolls in this Route: " + (commulativeScrolls? `${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments`: 'data unavailable');
+        commulativeScrollCount.className = 'text-sm has-info';
         commulativeScrollCount.replaceChildren(commulativeScrollIcon, commulativeScrollLabel);
+        commulativeScrollCount.addEventListener('mouseover', ()=>showPopper(commulativeScrollCount, "Scrolls in this Route: " + (commulativeScrolls? `${commulativeScrolls.power} Power + ${commulativeScrolls.cursed} Cursed + ${commulativeScrolls.dual} Dual + ${commulativeScrolls.fragment} Fragments`: 'data unavailable')));
+
+        props.replaceChildren(scrollCount, commulativeScrollCount);
 
         const icons = document.createElement('div');
         icons.className = 'absolute top-0 left-0 m-1 flex';
@@ -175,8 +198,7 @@ export function resetRoutePanel() {
             tags, 
             icons, 
             title, 
-            scrollCount, 
-            commulativeScrollCount
+            props
         );
     });
 
@@ -192,8 +214,7 @@ function createBiomeDom(biome: string): HTMLElement {
     const placeholderUrl = `${import.meta.env.BASE_URL}biome_placeholder.svg`;
     const actualUrl = biomeService.getImageURL(biome);
     biomeDom.className = `
-        p-2 inline-block relative bg-center bg-no-repeat z-10
-        cursor-pointer active:outline-2 
+        p-2 m-1 flex flex-col relative items-center justify-center gap-2 bg-center bg-no-repeat z-10
         bg-[length:100%_100%] hover:bg-[length:110%_110%] transition-[background-size] duration-400 ease-out
     `;
     biomeDom.style.height = `${height}px`;
@@ -242,6 +263,11 @@ export function RoutePanel(_biomeService: BiomeService): HTMLElement {
         const levelDom = createLevelDom(l);
         routePanelElement?.appendChild(levelDom);
     });
+
+    popper = document.createElement('div');
+    popper.className = 'fixed z-1000 w-auto h-auto bg-black/60 p-2 text-xs text-white';
+    popper.hidden = true;
+    routePanelElement.appendChild(popper);
     
     resetRoutePanel();
     eventEmitter.on('control-panel-reset', resetRoutePanel);

@@ -1,1 +1,3947 @@
-{"wiki_base": "https://deadcells.wiki.gg", "biomes": [{"name": "Prisoners' Quarters", "wiki": "/wiki/Prisoners%27_Quarters", "image": "/images/thumb/c/cd/Prisoners%27_Quarters.png/600px-Prisoners%27_Quarters.png", "dlc": null, "type": "standard", "level": 1, "is_spoiler": false, "entrances": {"0": [], "1": [], "2": [], "3": [], "4": []}, "exits": {"0": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Castle's Outskirts"], "1": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Castle's Outskirts"], "2": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Castle's Outskirts"], "3": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Castle's Outskirts"], "4": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Castle's Outskirts"]}, "scrolls": {"0": {"power": 2, "dual": 0, "fragment": 0, "cursed": 0.01}, "1": {"power": 2, "dual": 0, "fragment": 0, "cursed": 0.01}, "2": {"power": 2, "dual": 0, "fragment": 0, "cursed": 0.01}, "3": {"power": 2, "dual": 0, "fragment": 0, "cursed": 0.01}, "4": {"power": 2, "dual": 0, "fragment": 0, "cursed": 0.01}}, "elites": {"obelisk": 0.05, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Promenade of the Condemned", "wiki": "/wiki/Promenade_of_the_Condemned", "image": "/images/thumb/a/a4/Promenade_of_the_Condemned.png/598px-Promenade_of_the_Condemned.png", "dlc": null, "type": "standard", "level": 2, "is_spoiler": false, "entrances": {"0": ["Prisoners' Quarters"], "1": ["Prisoners' Quarters"], "2": ["Prisoners' Quarters"], "3": ["Prisoners' Quarters"], "4": ["Prisoners' Quarters"]}, "exits": {"0": ["Ramparts", "Prison Depths", "Ossuary", "Morass of the Banished"], "1": ["Ramparts", "Prison Depths", "Ossuary", "Morass of the Banished"], "2": ["Ramparts", "Prison Depths", "Ossuary", "Morass of the Banished"], "3": ["Ramparts", "Prison Depths", "Ossuary", "Morass of the Banished"], "4": ["Ramparts", "Prison Depths", "Ossuary", "Morass of the Banished"]}, "scrolls": {"0": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 2, "dual": 2, "fragment": 1, "cursed": 0.1}, "4": {"power": 2, "dual": 2, "fragment": 2, "cursed": 0.1}}, "elites": {"obelisk": 0.0, "wandering": 0.5}, "doors": {"0": [], "1": ["Weapon/Skill Shop"], "2": ["Cell Vat"], "3": ["Treasure Chest"], "4": ["Treasure Chest"]}, "timed_door": 120}, {"name": "Toxic Sewers", "wiki": "/wiki/Toxic_Sewers", "image": "/images/thumb/Toxic_Sewers.png/598px-Toxic_Sewers.png", "dlc": null, "type": "standard", "level": 2, "is_spoiler": false, "entrances": {"0": ["Prisoners' Quarters"], "1": ["Prisoners' Quarters"], "2": ["Prisoners' Quarters"], "3": ["Prisoners' Quarters"], "4": ["Prisoners' Quarters"]}, "exits": {"0": ["Ramparts", "Ancient Sewers", "Corrupted Prison", "Dracula's Castle (early)"], "1": ["Ramparts", "Ancient Sewers", "Corrupted Prison", "Dracula's Castle (early)"], "2": ["Ramparts", "Ancient Sewers", "Corrupted Prison", "Dracula's Castle (early)"], "3": ["Ramparts", "Ancient Sewers", "Corrupted Prison", "Dracula's Castle (early)"], "4": ["Ramparts", "Ancient Sewers", "Corrupted Prison", "Dracula's Castle (early)"]}, "scrolls": {"0": {"power": 1, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 2, "dual": 2, "fragment": 2, "cursed": 0.1}, "4": {"power": 2, "dual": 2, "fragment": 3, "cursed": 0.1}}, "elites": {"obelisk": 0.05, "wandering": 0.7}, "doors": {"0": [], "1": ["Treasure Chest"], "2": [], "3": [], "4": []}, "timed_door": 120}, {"name": "Dilapidated Arboretum", "wiki": "/wiki/Dilapidated_Arboretum", "image": "/images/thumb/a/a4/Dilapidated_Arboretum.png/598px-Dilapidated_Arboretum.png", "dlc": "TBS", "type": "standard", "level": 2, "is_spoiler": false, "entrances": {"0": ["Prisoners' Quarters"], "1": ["Prisoners' Quarters"], "2": ["Prisoners' Quarters"], "3": ["Prisoners' Quarters"], "4": ["Prisoners' Quarters"]}, "exits": {"0": ["Morass of the Banished", "Ramparts", "Prison Depths"], "1": ["Morass of the Banished", "Ramparts", "Prison Depths"], "2": ["Morass of the Banished", "Ramparts", "Prison Depths"], "3": ["Morass of the Banished", "Ramparts", "Prison Depths"], "4": ["Morass of the Banished", "Ramparts", "Prison Depths"]}, "scrolls": {"0": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 2, "dual": 2, "fragment": 1, "cursed": 0.1}, "4": {"power": 2, "dual": 2, "fragment": 2, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0.5}, "doors": {"0": [], "1": ["Weapon/Skill Shop"], "2": ["Cell Vat"], "3": ["Treasure Chest"], "4": ["Treasure Chest"]}, "timed_door": 120}, {"name": "Castle's Outskirts", "wiki": "/wiki/Castle%27s_Outskirts", "image": "/images/thumb/Castle%27s_Outskirts.png/599px-Castle%27s_Outskirts.png", "dlc": "RtC", "type": "standard", "level": 2, "is_spoiler": false, "entrances": {"0": ["Prisoners' Quarters"], "1": ["Prisoners' Quarters"], "2": ["Prisoners' Quarters"], "3": ["Prisoners' Quarters"], "4": ["Prisoners' Quarters"]}, "exits": {"0": ["Dracula's Castle (early)", "Corrupted Prison", "Ossuary"], "1": ["Dracula's Castle (early)", "Corrupted Prison", "Ossuary"], "2": ["Dracula's Castle (early)", "Corrupted Prison", "Ossuary"], "3": ["Dracula's Castle (early)", "Corrupted Prison", "Ossuary"], "4": ["Dracula's Castle (early)", "Corrupted Prison", "Ossuary"]}, "scrolls": {"0": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 2, "dual": 2, "fragment": 1, "cursed": 0.1}, "4": {"power": 2, "dual": 2, "fragment": 3, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": 480}, {"name": "Ramparts", "wiki": "/wiki/Ramparts", "image": "/images/thumb/b/be/Ramparts.png/598px-Ramparts.png", "dlc": null, "type": "standard", "level": 3, "is_spoiler": false, "entrances": {"0": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum"], "1": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Corrupted Prison"], "2": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Corrupted Prison"], "3": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Corrupted Prison"], "4": ["Promenade of the Condemned", "Toxic Sewers", "Dilapidated Arboretum", "Corrupted Prison"]}, "exits": {"0": ["Black Bridge"], "1": ["Black Bridge"], "2": ["Black Bridge"], "3": ["Black Bridge", "Insufferable Crypt"], "4": ["Black Bridge", "Insufferable Crypt"]}, "scrolls": {"0": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 2, "fragment": 1, "cursed": 0.1}, "4": {"power": 4, "dual": 2, "fragment": 2, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": ["Food Shop"], "3": ["exit: Insufferable Crypt"], "4": ["Treasure Chest"]}, "timed_door": 480}, {"name": "Prison Depths", "wiki": "/wiki/Prison_Depths", "image": "/images/thumb/Prison_Depths.png/598px-Prison_Depths.png", "dlc": null, "type": "optional", "level": 2.5, "is_spoiler": false, "entrances": {"0": ["Promenade of the Condemned", "Dilapidated Arboretum"], "1": ["Promenade of the Condemned", "Dilapidated Arboretum"], "2": ["Promenade of the Condemned", "Dilapidated Arboretum"], "3": ["Promenade of the Condemned", "Dilapidated Arboretum"], "4": ["Promenade of the Condemned", "Dilapidated Arboretum"]}, "exits": {"0": ["Ossuary", "Morass of the Banished"], "1": ["Ossuary", "Morass of the Banished", "Ancient Sewers"], "2": ["Ossuary", "Morass of the Banished", "Ancient Sewers"], "3": ["Ossuary", "Morass of the Banished", "Ancient Sewers"], "4": ["Ossuary", "Morass of the Banished", "Ancient Sewers"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "3": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "4": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": ["exit: Ancient Sewers"], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Ossuary", "wiki": "/wiki/Ossuary", "image": "/images/thumb/Ossuary.png/598px-Ossuary.png", "dlc": null, "type": "standard", "level": 3, "is_spoiler": false, "entrances": {"0": ["Promenade of the Condemned", "Prison Depths", "Castle's Outskirts"], "1": ["Promenade of the Condemned", "Prison Depths", "Castle's Outskirts"], "2": ["Promenade of the Condemned", "Prison Depths", "Castle's Outskirts"], "3": ["Promenade of the Condemned", "Prison Depths", "Castle's Outskirts"], "4": ["Promenade of the Condemned", "Prison Depths", "Castle's Outskirts"]}, "exits": {"0": ["Black Bridge", "Defiled Necropolis"], "1": ["Black Bridge", "Defiled Necropolis"], "2": ["Black Bridge", "Defiled Necropolis"], "3": ["Black Bridge", "Defiled Necropolis"], "4": ["Black Bridge", "Defiled Necropolis"]}, "scrolls": {"0": {"power": 2, "dual": 2, "fragment": 0, "cursed": 1.1}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 1.1}, "2": {"power": 3, "dual": 2, "fragment": 0, "cursed": 1.1}, "3": {"power": 3, "dual": 2, "fragment": 2, "cursed": 1.1}, "4": {"power": 3, "dual": 2, "fragment": 3, "cursed": 1.1}}, "elites": {"obelisk": 0.8, "wandering": 0.2}, "doors": {"0": [], "1": ["Food Shop"], "2": ["Treasure Chest"], "3": [], "4": []}, "timed_door": 480}, {"name": "Morass of the Banished", "wiki": "/wiki/Morass_of_the_Banished", "image": "/images/thumb/4/4b/Morass_of_the_Banished.png/598px-Morass_of_the_Banished.png", "dlc": "TBS", "type": "standard", "level": 3, "is_spoiler": false, "entrances": {"0": ["Dilapidated Arboretum", "Prison Depths", "Promenade of the Condemned"], "1": ["Dilapidated Arboretum", "Prison Depths", "Promenade of the Condemned"], "2": ["Dilapidated Arboretum", "Prison Depths", "Promenade of the Condemned"], "3": ["Dilapidated Arboretum", "Prison Depths", "Promenade of the Condemned"], "4": ["Dilapidated Arboretum", "Prison Depths", "Promenade of the Condemned"]}, "exits": {"0": ["Nest"], "1": ["Nest"], "2": ["Nest"], "3": ["Nest"], "4": ["Nest"]}, "scrolls": {"0": {"power": 2, "dual": 2, "fragment": 0, "cursed": 1.1}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 1.1}, "2": {"power": 3, "dual": 2, "fragment": 0, "cursed": 1.1}, "3": {"power": 3, "dual": 2, "fragment": 2, "cursed": 1.1}, "4": {"power": 3, "dual": 2, "fragment": 4, "cursed": 1.1}}, "elites": {"obelisk": 0, "wandering": 0.6}, "doors": {"0": [], "1": [], "2": ["Food Shop"], "3": [], "4": []}, "timed_door": null}, {"name": "Ancient Sewers", "wiki": "/wiki/Ancient_Sewers", "image": "/images/thumb/3/39/Ancient_Sewers.png/598px-Ancient_Sewers.png", "dlc": null, "type": "standard", "level": 3, "is_spoiler": false, "entrances": {"0": ["Toxic Sewers", "Corrupted Prison"], "1": ["Toxic Sewers", "Corrupted Prison", "Prison Depths"], "2": ["Toxic Sewers", "Corrupted Prison", "Prison Depths"], "3": ["Toxic Sewers", "Corrupted Prison", "Prison Depths"], "4": ["Toxic Sewers", "Corrupted Prison", "Prison Depths"]}, "exits": {"0": ["Insufferable Crypt"], "1": ["Insufferable Crypt"], "2": ["Insufferable Crypt"], "3": ["Insufferable Crypt"], "4": ["Insufferable Crypt"]}, "scrolls": {"0": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 2, "fragment": 3, "cursed": 0.1}, "4": {"power": 4, "dual": 2, "fragment": 5, "cursed": 0.1}}, "elites": {"obelisk": 1.0, "wandering": 0.1}, "doors": {"0": [], "1": ["Treasure Chest"], "2": ["Treasure Chest"], "3": ["Treasure Chest"], "4": ["Chained Items"]}, "timed_door": null}, {"name": "Corrupted Prison", "wiki": "/wiki/Corrupted_Prison", "image": "/images/thumb/3/35/Corrupted_Prison.png/598px-Corrupted_Prison.png", "dlc": null, "type": "optional", "level": 2.5, "is_spoiler": false, "entrances": {"0": ["Toxic Sewers", "Castle's Outskirts"], "1": ["Toxic Sewers", "Castle's Outskirts"], "2": ["Toxic Sewers", "Castle's Outskirts"], "3": ["Toxic Sewers", "Castle's Outskirts"], "4": ["Toxic Sewers", "Castle's Outskirts"]}, "exits": {"0": ["Dracula's Castle (early)", "Ancient Sewers"], "1": ["Dracula's Castle (early)", "Ancient Sewers", "Ramparts"], "2": ["Dracula's Castle (early)", "Ancient Sewers", "Ramparts"], "3": ["Dracula's Castle (early)", "Ancient Sewers", "Ramparts"], "4": ["Dracula's Castle (early)", "Ancient Sewers", "Ramparts"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "3": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}, "4": {"power": 0, "dual": 0, "fragment": 0, "cursed": 1.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": ["exit: Ramparts"], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Dracula's Castle (early)", "wiki": "/wiki/Dracula%27s_Castle", "image": "/images/thumb/0/0a/Dracula%27s_Castle.png/599px-Dracula%27s_Castle.png", "dlc": "RtC", "type": "standard", "level": 3, "is_spoiler": false, "entrances": {"0": ["Castle's Outskirts", "Corrupted Prison", "Toxic Sewers"], "1": ["Castle's Outskirts", "Corrupted Prison", "Toxic Sewers"], "2": ["Castle's Outskirts", "Corrupted Prison", "Toxic Sewers"], "3": ["Castle's Outskirts", "Corrupted Prison", "Toxic Sewers"], "4": ["Castle's Outskirts", "Corrupted Prison", "Toxic Sewers"]}, "exits": {"0": ["Defiled Necropolis", "Black Bridge"], "1": ["Defiled Necropolis", "Black Bridge"], "2": ["Defiled Necropolis", "Black Bridge"], "3": ["Defiled Necropolis", "Black Bridge"], "4": ["Defiled Necropolis", "Black Bridge"]}, "scrolls": {"0": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 2, "fragment": 3, "cursed": 0.1}, "4": {"power": 4, "dual": 2, "fragment": 4, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Dracula's Castle (late)", "wiki": "/wiki/Dracula%27s_Castle", "image": "/images/thumb/0/0a/Dracula%27s_Castle.png/599px-Dracula%27s_Castle.png", "dlc": "RtC", "type": "standard", "level": 6, "is_spoiler": false, "entrances": {"0": ["Mausoleum", "Clock Room", "Guardian's Haven"], "1": ["Mausoleum", "Clock Room", "Guardian's Haven"], "2": ["Mausoleum", "Clock Room", "Guardian's Haven"], "3": ["Mausoleum", "Clock Room", "Guardian's Haven"], "4": ["Mausoleum", "Clock Room", "Guardian's Haven"]}, "exits": {"0": ["Master's Keep"], "1": ["Master's Keep"], "2": ["Master's Keep"], "3": ["Master's Keep"], "4": ["Master's Keep"]}, "scrolls": {"0": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 3, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 3, "dual": 2, "fragment": 1, "cursed": 0.1}, "4": {"power": 3, "dual": 2, "fragment": 2, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Black Bridge", "wiki": "/wiki/Black_Bridge", "image": "/images/thumb/e/e8/Black_Bridge.png/598px-Black_Bridge.png", "dlc": null, "type": "boss", "level": 3.5, "is_spoiler": false, "entrances": {"0": ["Ramparts", "Ossuary", "Dracula's Castle (early)"], "1": ["Ramparts", "Ossuary", "Dracula's Castle (early)"], "2": ["Ramparts", "Ossuary", "Dracula's Castle (early)"], "3": ["Ramparts", "Ossuary", "Dracula's Castle (early)"], "4": ["Ramparts", "Ossuary", "Dracula's Castle (early)"]}, "exits": {"0": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines"], "1": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines"], "2": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines"], "3": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines"], "4": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 2, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": 900}, {"name": "Insufferable Crypt", "wiki": "/wiki/Insufferable_Crypt", "image": "/images/thumb/Insufferable_Crypt.png/598px-Insufferable_Crypt.png", "dlc": null, "type": "boss", "level": 3.5, "is_spoiler": false, "entrances": {"0": ["Ancient Sewers"], "1": ["Ancient Sewers"], "2": ["Ancient Sewers"], "3": ["Ancient Sewers", "Ramparts"], "4": ["Ancient Sewers", "Ramparts"]}, "exits": {"0": ["Graveyard", "Slumbering Sanctuary"], "1": ["Graveyard", "Slumbering Sanctuary"], "2": ["Graveyard", "Slumbering Sanctuary"], "3": ["Graveyard", "Slumbering Sanctuary"], "4": ["Graveyard", "Slumbering Sanctuary"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 5, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": 1170}, {"name": "Defiled Necropolis", "wiki": "/wiki/Defiled_Necropolis", "image": "/images/thumb/5/5f/Defiled_Necropolis.png/599px-Defiled_Necropolis.png", "dlc": "RtC", "type": "boss", "level": 3.5, "is_spoiler": false, "entrances": {"0": ["Dracula's Castle (early)", "Ossuary"], "1": ["Dracula's Castle (early)", "Ossuary"], "2": ["Dracula's Castle (early)", "Ossuary"], "3": ["Dracula's Castle (early)", "Ossuary"], "4": ["Dracula's Castle (early)", "Ossuary"]}, "exits": {"0": ["Slumbering Sanctuary", "Stilt Village", "Graveyard"], "1": ["Slumbering Sanctuary", "Stilt Village", "Graveyard"], "2": ["Slumbering Sanctuary", "Stilt Village", "Graveyard"], "3": ["Slumbering Sanctuary", "Stilt Village", "Graveyard"], "4": ["Slumbering Sanctuary", "Stilt Village", "Graveyard"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 2, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Nest", "wiki": "/wiki/Nest", "image": "/images/thumb/Nest.png/598px-Nest.png", "dlc": "TBS", "type": "boss", "level": 3.5, "is_spoiler": false, "entrances": {"0": ["Morass of the Banished"], "1": ["Morass of the Banished"], "2": ["Morass of the Banished"], "3": ["Morass of the Banished"], "4": ["Morass of the Banished"]}, "exits": {"0": ["Stilt Village", "Graveyard", "Fractured Shrines"], "1": ["Stilt Village", "Graveyard", "Fractured Shrines"], "2": ["Stilt Village", "Graveyard", "Fractured Shrines"], "3": ["Stilt Village", "Graveyard", "Fractured Shrines"], "4": ["Stilt Village", "Graveyard", "Fractured Shrines"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 4, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": 900}, {"name": "Master's Keep", "wiki": "/wiki/Master%27s_Keep", "image": "/images/thumb/Master%27s_Keep.png/599px-Master%27s_Keep.png", "dlc": "RtC", "type": "boss", "level": 6.5, "is_spoiler": false, "entrances": {"0": ["Dracula's Castle (late)", "High Peak Castle"], "1": ["Dracula's Castle (late)", "High Peak Castle"], "2": ["Dracula's Castle (late)", "High Peak Castle"], "3": ["Dracula's Castle (late)", "High Peak Castle"], "4": ["Dracula's Castle (late)", "High Peak Castle"]}, "exits": {"0": [], "1": [], "2": [], "3": [], "4": []}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Stilt Village", "wiki": "/wiki/Stilt_Village", "image": "/images/thumb/f/f0/Stilt_Village.png/598px-Stilt_Village.png", "dlc": null, "type": "standard", "level": 4, "is_spoiler": false, "entrances": {"0": ["Black Bridge", "Nest", "Defiled Necropolis"], "1": ["Black Bridge", "Nest", "Defiled Necropolis"], "2": ["Black Bridge", "Nest", "Defiled Necropolis"], "3": ["Black Bridge", "Nest", "Defiled Necropolis"], "4": ["Black Bridge", "Nest", "Defiled Necropolis"]}, "exits": {"0": ["Clock Tower", "Forgotten Sepulcher", "Undying Shores"], "1": ["Clock Tower", "Forgotten Sepulcher", "Undying Shores"], "2": ["Clock Tower", "Forgotten Sepulcher", "Undying Shores"], "3": ["Clock Tower", "Forgotten Sepulcher", "Undying Shores"], "4": ["Clock Tower", "Forgotten Sepulcher", "Undying Shores"]}, "scrolls": {"0": {"power": 3, "dual": 0, "fragment": 0, "cursed": 0.1}, "1": {"power": 3, "dual": 0, "fragment": 0, "cursed": 0.1}, "2": {"power": 3, "dual": 0, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 0, "fragment": 1, "cursed": 0.1}, "4": {"power": 4, "dual": 0, "fragment": 2, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0.75}, "doors": {"0": [], "1": ["Treasure Chest"], "2": ["Treasure Chest"], "3": ["Treasure Chest"], "4": []}, "timed_door": null}, {"name": "Slumbering Sanctuary", "wiki": "/wiki/Slumbering_Sanctuary", "image": "/images/thumb/b/b4/Slumbering_Sanctuary.png/598px-Slumbering_Sanctuary.png", "dlc": null, "type": "standard", "level": 4, "is_spoiler": false, "entrances": {"0": ["Black Bridge", "Insufferable Crypt", "Defiled Necropolis"], "1": ["Black Bridge", "Insufferable Crypt", "Defiled Necropolis"], "2": ["Black Bridge", "Insufferable Crypt", "Defiled Necropolis"], "3": ["Black Bridge", "Insufferable Crypt", "Defiled Necropolis"], "4": ["Black Bridge", "Insufferable Crypt", "Defiled Necropolis"]}, "exits": {"0": ["Clock Tower", "Forgotten Sepulcher"], "1": ["Clock Tower", "Forgotten Sepulcher"], "2": ["Clock Tower", "Forgotten Sepulcher", "Cavern"], "3": ["Clock Tower", "Forgotten Sepulcher", "Cavern"], "4": ["Clock Tower", "Forgotten Sepulcher", "Cavern"]}, "scrolls": {"0": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "1": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "2": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "3": {"power": 3, "dual": 0, "fragment": 3, "cursed": 1.1}, "4": {"power": 3, "dual": 0, "fragment": 4, "cursed": 1.1}}, "elites": {"obelisk": 0.8, "wandering": 0.2}, "doors": {"0": [], "1": ["Treasure Chest"], "2": ["Chained Items", "exit: Cavern"], "3": ["Treasure Chest"], "4": []}, "timed_door": null}, {"name": "Fractured Shrines", "wiki": "/wiki/Fractured_Shrines", "image": "/images/thumb/c/c5/Fractured_Shrines.png/598px-Fractured_Shrines.png", "dlc": "FF", "type": "standard", "level": 4, "is_spoiler": false, "entrances": {"0": ["Black Bridge", "Nest"], "1": ["Black Bridge", "Nest"], "2": ["Black Bridge", "Nest"], "3": ["Black Bridge", "Nest"], "4": ["Black Bridge", "Nest"]}, "exits": {"0": ["Undying Shores", "Clock Tower", "Forgotten Sepulcher"], "1": ["Undying Shores", "Clock Tower", "Forgotten Sepulcher"], "2": ["Undying Shores", "Clock Tower", "Forgotten Sepulcher"], "3": ["Undying Shores", "Clock Tower", "Forgotten Sepulcher"], "4": ["Undying Shores", "Clock Tower", "Forgotten Sepulcher"]}, "scrolls": {"0": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "1": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "2": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "3": {"power": 3, "dual": 0, "fragment": 1, "cursed": 1.1}, "4": {"power": 3, "dual": 0, "fragment": 2, "cursed": 1.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": ["Treasure Chest"], "2": ["Treasure Chest"], "3": ["Treasure Chest"], "4": []}, "timed_door": null}, {"name": "Graveyard", "wiki": "/wiki/Graveyard", "image": "/images/thumb/d/d5/Graveyard.png/598px-Graveyard.png", "dlc": null, "type": "standard", "level": 4, "is_spoiler": false, "entrances": {"0": ["Insufferable Crypt", "Nest", "Defiled Necropolis"], "1": ["Insufferable Crypt", "Nest", "Defiled Necropolis"], "2": ["Insufferable Crypt", "Nest", "Defiled Necropolis"], "3": ["Insufferable Crypt", "Nest", "Defiled Necropolis"], "4": ["Insufferable Crypt", "Nest", "Defiled Necropolis"]}, "exits": {"0": ["Forgotten Sepulcher", "Cavern", "Undying Shores", "Clock Tower"], "1": ["Forgotten Sepulcher", "Cavern", "Undying Shores", "Clock Tower"], "2": ["Forgotten Sepulcher", "Cavern", "Undying Shores", "Clock Tower"], "3": ["Forgotten Sepulcher", "Cavern", "Undying Shores", "Clock Tower"], "4": ["Forgotten Sepulcher", "Cavern", "Undying Shores", "Clock Tower"]}, "scrolls": {"0": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "1": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "2": {"power": 2, "dual": 0, "fragment": 0, "cursed": 1.1}, "3": {"power": 3, "dual": 0, "fragment": 2, "cursed": 1.1}, "4": {"power": 3, "dual": 0, "fragment": 3, "cursed": 1.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": ["Chained Items"], "2": ["Food Shop"], "3": [], "4": ["Chained Items"]}, "timed_door": 1170}, {"name": "Clock Tower", "wiki": "/wiki/Clock_Tower", "image": "/images/thumb/6/6b/Clock_Tower.png/598px-Clock_Tower.png", "dlc": null, "type": "standard", "level": 5, "is_spoiler": false, "entrances": {"0": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines", "Graveyard"], "1": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines", "Graveyard"], "2": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines", "Graveyard"], "3": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines", "Graveyard"], "4": ["Stilt Village", "Slumbering Sanctuary", "Fractured Shrines", "Graveyard"]}, "exits": {"0": ["Clock Room"], "1": ["Clock Room"], "2": ["Clock Room"], "3": ["Clock Room"], "4": ["Clock Room"]}, "scrolls": {"0": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 2, "fragment": 3, "cursed": 0.1}, "4": {"power": 5, "dual": 2, "fragment": 4, "cursed": 0.1}}, "elites": {"obelisk": 0.4, "wandering": 1.0}, "doors": {"0": [], "1": ["Weapon/Skill Shop"], "2": ["Cell Vat"], "3": ["Treasure Chest"], "4": []}, "timed_door": null}, {"name": "Forgotten Sepulcher", "wiki": "/wiki/Forgotten_Sepulcher", "image": "/images/thumb/Forgotten_Sepulcher.png/598px-Forgotten_Sepulcher.png", "dlc": null, "type": "standard", "level": 5, "is_spoiler": false, "entrances": {"0": ["Stilt Village", "Slumbering Sanctuary", "Graveyard", "Fractured Shrines"], "1": ["Stilt Village", "Slumbering Sanctuary", "Graveyard", "Fractured Shrines"], "2": ["Stilt Village", "Slumbering Sanctuary", "Graveyard", "Fractured Shrines"], "3": ["Stilt Village", "Slumbering Sanctuary", "Graveyard", "Fractured Shrines"], "4": ["Stilt Village", "Slumbering Sanctuary", "Graveyard", "Fractured Shrines"]}, "exits": {"0": ["Clock Room"], "1": ["Clock Room"], "2": ["Clock Room", "Guardian's Haven"], "3": ["Clock Room", "Guardian's Haven"], "4": ["Clock Room", "Guardian's Haven"]}, "scrolls": {"0": {"power": 3, "dual": 2, "fragment": 0, "cursed": 1.1}, "1": {"power": 3, "dual": 2, "fragment": 0, "cursed": 1.1}, "2": {"power": 3, "dual": 2, "fragment": 0, "cursed": 1.1}, "3": {"power": 3, "dual": 2, "fragment": 2, "cursed": 1.1}, "4": {"power": 4, "dual": 2, "fragment": 3, "cursed": 1.1}}, "elites": {"obelisk": 0.5, "wandering": 0.5}, "doors": {"0": [], "1": [], "2": ["Chained Items", "exit: Guardian's Haven"], "3": ["Treasure Chest"], "4": []}, "timed_door": 1560}, {"name": "Undying Shores", "wiki": "/wiki/Undying_Shores", "image": "/images/thumb/Undying_Shores.png/598px-Undying_Shores.png", "dlc": "FF", "type": "standard", "level": 5, "is_spoiler": false, "entrances": {"0": ["Fractured Shrines", "Stilt Village", "Graveyard"], "1": ["Fractured Shrines", "Stilt Village", "Graveyard"], "2": ["Fractured Shrines", "Stilt Village", "Graveyard"], "3": ["Fractured Shrines", "Stilt Village", "Graveyard"], "4": ["Fractured Shrines", "Stilt Village", "Graveyard"]}, "exits": {"0": ["Mausoleum"], "1": ["Mausoleum"], "2": ["Mausoleum"], "3": ["Mausoleum"], "4": ["Mausoleum"]}, "scrolls": {"0": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 2, "fragment": 3, "cursed": 0.1}, "4": {"power": 5, "dual": 2, "fragment": 4, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 1.0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Cavern", "wiki": "/wiki/Cavern", "image": "/images/thumb/Cavern.png/598px-Cavern.png", "dlc": null, "type": "standard", "level": 5, "is_spoiler": false, "entrances": {"0": ["Graveyard"], "1": ["Graveyard"], "2": ["Graveyard", "Slumbering Sanctuary"], "3": ["Graveyard", "Slumbering Sanctuary"], "4": ["Graveyard", "Slumbering Sanctuary"]}, "exits": {"0": ["Guardian's Haven", "Mausoleum"], "1": ["Guardian's Haven", "Mausoleum"], "2": ["Guardian's Haven", "Mausoleum"], "3": ["Guardian's Haven", "Mausoleum"], "4": ["Guardian's Haven", "Mausoleum"]}, "scrolls": {"0": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "1": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "2": {"power": 4, "dual": 2, "fragment": 0, "cursed": 0.1}, "3": {"power": 4, "dual": 2, "fragment": 4, "cursed": 0.1}, "4": {"power": 5, "dual": 2, "fragment": 5, "cursed": 0.1}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": ["Treasure Chest"], "2": ["Treasure Chest"], "3": ["Chained Items"], "4": ["Festive Outfit"]}, "timed_door": null}, {"name": "Clock Room", "wiki": "/wiki/Clock_Room", "image": "/images/thumb/3/37/Clock_Room.png/598px-Clock_Room.png", "dlc": null, "type": "boss", "level": 5.5, "is_spoiler": false, "entrances": {"0": ["Clock Tower", "Forgotten Sepulcher"], "1": ["Clock Tower", "Forgotten Sepulcher"], "2": ["Clock Tower", "Forgotten Sepulcher"], "3": ["Clock Tower", "Forgotten Sepulcher"], "4": ["Clock Tower", "Forgotten Sepulcher"]}, "exits": {"0": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "1": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "2": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "3": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "4": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 2, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Guardian's Haven", "wiki": "/wiki/Guardian%27s_Haven", "image": "/images/thumb/Guardian%27s_Haven.png/598px-Guardian%27s_Haven.png", "dlc": null, "type": "boss", "level": 5.5, "is_spoiler": false, "entrances": {"0": ["Cavern"], "1": ["Cavern"], "2": ["Cavern", "Forgotten Sepulcher"], "3": ["Cavern", "Forgotten Sepulcher"], "4": ["Cavern", "Forgotten Sepulcher"]}, "exits": {"0": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Throne Room", "Dracula's Castle (late)"], "1": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Throne Room", "Dracula's Castle (late)"], "2": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Throne Room", "Dracula's Castle (late)"], "3": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Throne Room", "Dracula's Castle (late)"], "4": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Throne Room", "Dracula's Castle (late)"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 4, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Mausoleum", "wiki": "/wiki/Mausoleum", "image": "/images/thumb/1/15/Mausoleum.png/598px-Mausoleum.png", "dlc": "FF", "type": "boss", "level": 5.5, "is_spoiler": false, "entrances": {"0": ["Undying Shores", "Cavern"], "1": ["Undying Shores", "Cavern"], "2": ["Undying Shores", "Cavern"], "3": ["Undying Shores", "Cavern"], "4": ["Undying Shores", "Cavern"]}, "exits": {"0": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "1": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "2": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "3": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"], "4": ["High Peak Castle", "Derelict Distillery", "Infested Shipwreck", "Dracula's Castle (late)"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 2, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "High Peak Castle", "wiki": "/wiki/High_Peak_Castle", "image": "/images/thumb/f/f0/High_Peak_Castle.png/598px-High_Peak_Castle.png", "dlc": null, "type": "standard", "level": 6, "is_spoiler": false, "entrances": {"0": ["Clock Room", "Guardian's Haven", "Mausoleum"], "1": ["Clock Room", "Guardian's Haven", "Mausoleum"], "2": ["Clock Room", "Guardian's Haven", "Mausoleum"], "3": ["Clock Room", "Guardian's Haven", "Mausoleum"], "4": ["Clock Room", "Guardian's Haven", "Mausoleum"]}, "exits": {"0": ["Throne Room", "Master's Keep"], "1": ["Throne Room", "Master's Keep"], "2": ["Throne Room", "Master's Keep"], "3": ["Throne Room", "Master's Keep"], "4": ["Throne Room", "Master's Keep"]}, "scrolls": {"0": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.0}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.0}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.0}, "3": {"power": 2, "dual": 2, "fragment": 1, "cursed": 0.0}, "4": {"power": 2, "dual": 2, "fragment": 2, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0.6}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Derelict Distillery", "wiki": "/wiki/Derelict_Distillery", "image": "/images/thumb/a/ad/Derelict_Distillery.png/600px-Derelict_Distillery.png", "dlc": null, "type": "standard", "level": 6, "is_spoiler": false, "entrances": {"0": ["Clock Room", "Guardian's Haven", "Mausoleum"], "1": ["Clock Room", "Guardian's Haven", "Mausoleum"], "2": ["Clock Room", "Guardian's Haven", "Mausoleum"], "3": ["Clock Room", "Guardian's Haven", "Mausoleum"], "4": ["Clock Room", "Guardian's Haven", "Mausoleum"]}, "exits": {"0": ["Throne Room", "Lighthouse"], "1": ["Throne Room", "Lighthouse"], "2": ["Throne Room", "Lighthouse"], "3": ["Throne Room", "Lighthouse"], "4": ["Throne Room", "Lighthouse"]}, "scrolls": {"0": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.05}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.05}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.05}, "3": {"power": 2, "dual": 2, "fragment": 1, "cursed": 0.05}, "4": {"power": 2, "dual": 2, "fragment": 2, "cursed": 0.05}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Infested Shipwreck", "wiki": "/wiki/Infested_Shipwreck", "image": "/images/thumb/Infested_Shipwreck.png/600px-Infested_Shipwreck.png", "dlc": "TQatS", "type": "standard", "level": 6, "is_spoiler": false, "entrances": {"0": ["Clock Room", "Guardian's Haven", "Mausoleum"], "1": ["Clock Room", "Guardian's Haven", "Mausoleum"], "2": ["Clock Room", "Guardian's Haven", "Mausoleum"], "3": ["Clock Room", "Guardian's Haven", "Mausoleum"], "4": ["Clock Room", "Guardian's Haven", "Mausoleum"]}, "exits": {"0": ["Lighthouse"], "1": ["Lighthouse"], "2": ["Lighthouse"], "3": ["Lighthouse"], "4": ["Lighthouse"]}, "scrolls": {"0": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.0}, "1": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.0}, "2": {"power": 2, "dual": 2, "fragment": 0, "cursed": 0.0}, "3": {"power": 3, "dual": 2, "fragment": 1, "cursed": 0.0}, "4": {"power": 3, "dual": 2, "fragment": 2, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0.5}, "doors": {"0": [], "1": [], "2": ["Treasure Chest"], "3": ["Treasure Chest"], "4": ["Chained Items"]}, "timed_door": null}, {"name": "Throne Room", "wiki": "/wiki/Throne_Room", "image": "/images/thumb/e/ef/Throne_Room.png/598px-Throne_Room.png", "dlc": null, "type": "boss", "level": 6.5, "is_spoiler": false, "entrances": {"0": ["High Peak Castle", "Derelict Distillery", "Guardian's Haven"], "1": ["High Peak Castle", "Derelict Distillery", "Guardian's Haven"], "2": ["High Peak Castle", "Derelict Distillery", "Guardian's Haven"], "3": ["High Peak Castle", "Derelict Distillery", "Guardian's Haven"], "4": ["High Peak Castle", "Derelict Distillery", "Guardian's Haven"]}, "exits": {"0": [], "1": [], "2": [], "3": [], "4": ["Astrolab"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Lighthouse", "wiki": "/wiki/Lighthouse", "image": "/images/thumb/b/be/Lighthouse.png/598px-Lighthouse.png", "dlc": "TQatS", "type": "boss", "level": 6.5, "is_spoiler": false, "entrances": {"0": ["Infested Shipwreck", "Derelict Distillery"], "1": ["Infested Shipwreck", "Derelict Distillery"], "2": ["Infested Shipwreck", "Derelict Distillery"], "3": ["Infested Shipwreck", "Derelict Distillery"], "4": ["Infested Shipwreck", "Derelict Distillery"]}, "exits": {"0": ["The Crown"], "1": ["The Crown"], "2": ["The Crown"], "3": ["The Crown"], "4": ["The Crown"]}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 1, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 3, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Astrolab", "wiki": "/wiki/Astrolab", "image": "/images/thumb/8/8c/Astrolab.png/598px-Astrolab.png", "dlc": "RotG", "type": "standard", "level": 7, "is_spoiler": true, "entrances": {"0": ["Throne Room"], "1": ["Throne Room"], "2": ["Throne Room"], "3": ["Throne Room"], "4": ["Throne Room"]}, "exits": {"0": ["Observatory"], "1": ["Observatory"], "2": ["Observatory"], "3": ["Observatory"], "4": ["Observatory"]}, "scrolls": {"0": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.0}, "4": {"power": 0, "dual": 2, "fragment": 0, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "The Crown", "wiki": "/wiki/The_Crown", "image": "/images/thumb/9/9f/The_Crown.png/598px-The_Crown.png", "dlc": "TQatS", "type": "boss", "level": 8, "is_spoiler": false, "entrances": {"0": ["Lighthouse"], "1": ["Lighthouse"], "2": ["Lighthouse"], "3": ["Lighthouse"], "4": ["Lighthouse"]}, "exits": {"0": [], "1": [], "2": [], "3": [], "4": []}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}, {"name": "Observatory", "wiki": "/wiki/Observatory", "image": "/images/thumb/b/b4/Observatory.png/598px-Observatory.png", "dlc": "RotG", "type": "boss", "level": 8, "is_spoiler": true, "entrances": {"0": ["Astrolab"], "1": ["Astrolab"], "2": ["Astrolab"], "3": ["Astrolab"], "4": ["Astrolab"]}, "exits": {"0": [], "1": [], "2": [], "3": [], "4": []}, "scrolls": {"0": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "1": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "2": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "3": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}, "4": {"power": 0, "dual": 0, "fragment": 0, "cursed": 0.0}}, "elites": {"obelisk": 0, "wandering": 0}, "doors": {"0": [], "1": [], "2": [], "3": [], "4": []}, "timed_door": null}]}
+[
+  {
+    "name": "Prisoners' Quarters",
+    "wiki": "https://deadcells.wiki.gg/wiki/Prisoners%27_Quarters",
+    "image": "https://deadcells.wiki.gg/images/Prisoners%27_Quarters.png?4e8a94",
+    "desc": [
+      "In the social hierarchy of the island, there are the dogs, the rats, and just below them, the prisoners.",
+      "The lucky prisoners had a window in their cells... They ended up choking on the ashes from the Ossuary.",
+      "The prison is directly connected to the outer yard. The prisoners can choose between the rats and the crows."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 1,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "exits": {
+      "0": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Castle's Outskirts"
+      ],
+      "1": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Castle's Outskirts"
+      ],
+      "2": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Castle's Outskirts"
+      ],
+      "3": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Castle's Outskirts"
+      ],
+      "4": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Castle's Outskirts"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.01
+      },
+      "1": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.01
+      },
+      "2": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.01
+      },
+      "3": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.01
+      },
+      "4": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.01
+      }
+    },
+    "elites": {
+      "obelisk": 0.05,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Promenade of the Condemned",
+    "wiki": "https://deadcells.wiki.gg/wiki/Promenade_of_the_Condemned",
+    "image": "https://deadcells.wiki.gg/images/Promenade_of_the_Condemned.png?1d2e97",
+    "desc": [
+      "It's never a good sign, being sent to the yard. Few return. When they do, they're never quite the same.",
+      "The charming countryside atmosphere of the forest has given way to a... less wholesome ambience.",
+      "Time was, you could still hear the occasional bird singing outside. Now there's nothing but the caw of the crows."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 2,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Prisoners' Quarters"
+      ],
+      "1": [
+        "Prisoners' Quarters"
+      ],
+      "2": [
+        "Prisoners' Quarters"
+      ],
+      "3": [
+        "Prisoners' Quarters"
+      ],
+      "4": [
+        "Prisoners' Quarters"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Ramparts",
+        "Prison Depths",
+        "Ossuary",
+        "Morass of the Banished"
+      ],
+      "1": [
+        "Ramparts",
+        "Prison Depths",
+        "Ossuary",
+        "Morass of the Banished"
+      ],
+      "2": [
+        "Ramparts",
+        "Prison Depths",
+        "Ossuary",
+        "Morass of the Banished"
+      ],
+      "3": [
+        "Ramparts",
+        "Prison Depths",
+        "Ossuary",
+        "Morass of the Banished"
+      ],
+      "4": [
+        "Ramparts",
+        "Prison Depths",
+        "Ossuary",
+        "Morass of the Banished"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0.0,
+      "wandering": 0.5
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Weapon/Skill Shop"
+      ],
+      "2": [
+        "Cell Vat"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": [
+        "Treasure Chest"
+      ]
+    },
+    "timed_door": 120
+  },
+  {
+    "name": "Toxic Sewers",
+    "wiki": "https://deadcells.wiki.gg/wiki/Toxic_Sewers",
+    "image": "https://deadcells.wiki.gg/images/Toxic_Sewers.png?cfa1dd",
+    "desc": [
+      "Many believed the sewers were a path to freedom. No one ever made it out the other side.",
+      "The prison dumped all its unspeakable filth into the lower galleries, so it's no wonder something horrible emerged from them one day!",
+      "A greenish substance oozed its way into a number of pipes along here... and it continues to spread.",
+      "Hmm... is that... is that smell normal?"
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 2,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Prisoners' Quarters"
+      ],
+      "1": [
+        "Prisoners' Quarters"
+      ],
+      "2": [
+        "Prisoners' Quarters"
+      ],
+      "3": [
+        "Prisoners' Quarters"
+      ],
+      "4": [
+        "Prisoners' Quarters"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Ramparts",
+        "Ancient Sewers",
+        "Corrupted Prison",
+        "Dracula's Castle (early)"
+      ],
+      "1": [
+        "Ramparts",
+        "Ancient Sewers",
+        "Corrupted Prison",
+        "Dracula's Castle (early)"
+      ],
+      "2": [
+        "Ramparts",
+        "Ancient Sewers",
+        "Corrupted Prison",
+        "Dracula's Castle (early)"
+      ],
+      "3": [
+        "Ramparts",
+        "Ancient Sewers",
+        "Corrupted Prison",
+        "Dracula's Castle (early)"
+      ],
+      "4": [
+        "Ramparts",
+        "Ancient Sewers",
+        "Corrupted Prison",
+        "Dracula's Castle (early)"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 1,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0.05,
+      "wandering": 0.7
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Treasure Chest"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": 120
+  },
+  {
+    "name": "Dilapidated Arboretum",
+    "wiki": "https://deadcells.wiki.gg/wiki/Dilapidated_Arboretum",
+    "image": "https://deadcells.wiki.gg/images/Dilapidated_Arboretum.png?aa52ff",
+    "desc": [
+      "Once frequented by the lords and ladies of the island, they often noted that some of the mushrooms seemed to shrink from their presence.",
+      "Dappled light, soothing fountains and a fresh air brought the royals, aristocratic and various hangers-on. Unfortunately they brought the stink of the Royal Court with them...",
+      "Earthy smells of compost, spores and decay fill the air of the dilapidated Arboretum. The new inhabitants seem to like the climate quite a bit."
+    ],
+    "dlc": "TBS",
+    "type": "standard",
+    "level": 2,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Prisoners' Quarters"
+      ],
+      "1": [
+        "Prisoners' Quarters"
+      ],
+      "2": [
+        "Prisoners' Quarters"
+      ],
+      "3": [
+        "Prisoners' Quarters"
+      ],
+      "4": [
+        "Prisoners' Quarters"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Morass of the Banished",
+        "Ramparts",
+        "Prison Depths"
+      ],
+      "1": [
+        "Morass of the Banished",
+        "Ramparts",
+        "Prison Depths"
+      ],
+      "2": [
+        "Morass of the Banished",
+        "Ramparts",
+        "Prison Depths"
+      ],
+      "3": [
+        "Morass of the Banished",
+        "Ramparts",
+        "Prison Depths"
+      ],
+      "4": [
+        "Morass of the Banished",
+        "Ramparts",
+        "Prison Depths"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0.5
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Weapon/Skill Shop"
+      ],
+      "2": [
+        "Cell Vat"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": [
+        "Treasure Chest"
+      ]
+    },
+    "timed_door": 120
+  },
+  {
+    "name": "Castle's Outskirts",
+    "wiki": "https://deadcells.wiki.gg/wiki/Castle%27s_Outskirts",
+    "image": "https://deadcells.wiki.gg/images/Castle%27s_Outskirts.png?62a32b",
+    "desc": [
+      "No one comes here anymore but monsters or whip-wielding outcasts",
+      "These gardens were probably majestic, back in the day",
+      "What grows in the shadow of the Castle can be way worse than weeds..."
+    ],
+    "dlc": "RtC",
+    "type": "standard",
+    "level": 2,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Prisoners' Quarters"
+      ],
+      "1": [
+        "Prisoners' Quarters"
+      ],
+      "2": [
+        "Prisoners' Quarters"
+      ],
+      "3": [
+        "Prisoners' Quarters"
+      ],
+      "4": [
+        "Prisoners' Quarters"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Dracula's Castle (early)",
+        "Corrupted Prison",
+        "Ossuary"
+      ],
+      "1": [
+        "Dracula's Castle (early)",
+        "Corrupted Prison",
+        "Ossuary"
+      ],
+      "2": [
+        "Dracula's Castle (early)",
+        "Corrupted Prison",
+        "Ossuary"
+      ],
+      "3": [
+        "Dracula's Castle (early)",
+        "Corrupted Prison",
+        "Ossuary"
+      ],
+      "4": [
+        "Dracula's Castle (early)",
+        "Corrupted Prison",
+        "Ossuary"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": 480
+  },
+  {
+    "name": "Ramparts",
+    "wiki": "https://deadcells.wiki.gg/wiki/Ramparts",
+    "image": "https://deadcells.wiki.gg/images/Ramparts.png?c5cdcd",
+    "desc": [
+      "To keep things exciting, the guards sometimes threw condemned prisoners from the Ramparts. There's definitely nothing worse than the screams of someone who knows they're headed for the edge.",
+      "The guards would perch themselves on the Ramparts at the first sign of the Malaise... It didn't really help.",
+      "Once, some poor sod tried to escape over the Ramparts... He died of exhaustion during the climb, so the guards left his body on the wall to make sure everyone got the message."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 3,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum"
+      ],
+      "1": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Corrupted Prison"
+      ],
+      "2": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Corrupted Prison"
+      ],
+      "3": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Corrupted Prison"
+      ],
+      "4": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum",
+        "Corrupted Prison"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Black Bridge"
+      ],
+      "1": [
+        "Black Bridge"
+      ],
+      "2": [
+        "Black Bridge"
+      ],
+      "3": [
+        "Black Bridge",
+        "Insufferable Crypt"
+      ],
+      "4": [
+        "Black Bridge",
+        "Insufferable Crypt"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [
+        "Food Shop"
+      ],
+      "3": [
+        "exit: Insufferable Crypt"
+      ],
+      "4": [
+        "Treasure Chest"
+      ]
+    },
+    "timed_door": 480
+  },
+  {
+    "name": "Prison Depths",
+    "wiki": "https://deadcells.wiki.gg/wiki/Prison_Depths",
+    "image": "https://deadcells.wiki.gg/images/Prison_Depths.png?1cd6f6",
+    "desc": [
+      "Few prisoners managed to see out their time here alive. None, actually.",
+      "The worst prisoners were locked up here, in the company of the worst guards.",
+      "\"To be transferred to the Depths\" meant you weren't coming back. All you could really hope for was that your execution would be quick."
+    ],
+    "dlc": null,
+    "type": "optional",
+    "level": 2.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Promenade of the Condemned",
+        "Dilapidated Arboretum"
+      ],
+      "1": [
+        "Promenade of the Condemned",
+        "Dilapidated Arboretum"
+      ],
+      "2": [
+        "Promenade of the Condemned",
+        "Dilapidated Arboretum"
+      ],
+      "3": [
+        "Promenade of the Condemned",
+        "Dilapidated Arboretum"
+      ],
+      "4": [
+        "Promenade of the Condemned",
+        "Dilapidated Arboretum"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Ossuary",
+        "Morass of the Banished"
+      ],
+      "1": [
+        "Ossuary",
+        "Morass of the Banished",
+        "Ancient Sewers"
+      ],
+      "2": [
+        "Ossuary",
+        "Morass of the Banished",
+        "Ancient Sewers"
+      ],
+      "3": [
+        "Ossuary",
+        "Morass of the Banished",
+        "Ancient Sewers"
+      ],
+      "4": [
+        "Ossuary",
+        "Morass of the Banished",
+        "Ancient Sewers"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "exit: Ancient Sewers"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Ossuary",
+    "wiki": "https://deadcells.wiki.gg/wiki/Ossuary",
+    "image": "https://deadcells.wiki.gg/images/Ossuary.png?151626",
+    "desc": [
+      "After the Night of the Bloody Riots, the guards decided to condemn a whole wing of the prison so they could dump the bodies in there.",
+      "A thick layer of ashes covered the walls of the place. Filth crept into every nook and cranny.",
+      "One of the worst places on the island... Or one of the safest, depending on who you ask."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 3,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Promenade of the Condemned",
+        "Prison Depths",
+        "Castle's Outskirts"
+      ],
+      "1": [
+        "Promenade of the Condemned",
+        "Prison Depths",
+        "Castle's Outskirts"
+      ],
+      "2": [
+        "Promenade of the Condemned",
+        "Prison Depths",
+        "Castle's Outskirts"
+      ],
+      "3": [
+        "Promenade of the Condemned",
+        "Prison Depths",
+        "Castle's Outskirts"
+      ],
+      "4": [
+        "Promenade of the Condemned",
+        "Prison Depths",
+        "Castle's Outskirts"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Black Bridge",
+        "Defiled Necropolis"
+      ],
+      "1": [
+        "Black Bridge",
+        "Defiled Necropolis"
+      ],
+      "2": [
+        "Black Bridge",
+        "Defiled Necropolis"
+      ],
+      "3": [
+        "Black Bridge",
+        "Defiled Necropolis"
+      ],
+      "4": [
+        "Black Bridge",
+        "Defiled Necropolis"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "2": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 1.1
+      },
+      "4": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 1.1
+      }
+    },
+    "elites": {
+      "obelisk": 0.8,
+      "wandering": 0.2
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Food Shop"
+      ],
+      "2": [
+        "Treasure Chest"
+      ],
+      "3": [],
+      "4": []
+    },
+    "timed_door": 480
+  },
+  {
+    "name": "Morass of the Banished",
+    "wiki": "https://deadcells.wiki.gg/wiki/Morass_of_the_Banished",
+    "image": "https://deadcells.wiki.gg/images/Morass_of_the_Banished.png?bd0cba",
+    "desc": [
+      "A low lying part of the island where the leprous, diseased and quite often, poor, were sent to rot. The only refuge for survivors was in the trees.",
+      "Taking to the trees may have kept the Banished safe from the ticks, but it didn't save them from the ravages of the Malaise.",
+      "As the Malaise spread, the putrid stench of the fetid water and plagues of stinging creatures weren't the only things the surviving Banished had to deal with."
+    ],
+    "dlc": "TBS",
+    "type": "standard",
+    "level": 3,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Dilapidated Arboretum",
+        "Prison Depths",
+        "Promenade of the Condemned"
+      ],
+      "1": [
+        "Dilapidated Arboretum",
+        "Prison Depths",
+        "Promenade of the Condemned"
+      ],
+      "2": [
+        "Dilapidated Arboretum",
+        "Prison Depths",
+        "Promenade of the Condemned"
+      ],
+      "3": [
+        "Dilapidated Arboretum",
+        "Prison Depths",
+        "Promenade of the Condemned"
+      ],
+      "4": [
+        "Dilapidated Arboretum",
+        "Prison Depths",
+        "Promenade of the Condemned"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Nest"
+      ],
+      "1": [
+        "Nest"
+      ],
+      "2": [
+        "Nest"
+      ],
+      "3": [
+        "Nest"
+      ],
+      "4": [
+        "Nest"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "2": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 1.1
+      },
+      "4": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 4,
+        "cursed": 1.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0.6
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [
+        "Food Shop"
+      ],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Ancient Sewers",
+    "wiki": "https://deadcells.wiki.gg/wiki/Ancient_Sewers",
+    "image": "https://deadcells.wiki.gg/images/Ancient_Sewers.png?403a1e",
+    "desc": [
+      "Even the guards seemed to know nothing about this part of the sewers. Or maybe they all just wanted to pretend it wasn't there.",
+      "Mold everywhere... Spores floating in the fetid air... A perfectly welcoming ecosystem.",
+      "One day, a pile of filth started growling. That part of the sewers was promptly blocked off."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 3,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Toxic Sewers",
+        "Corrupted Prison"
+      ],
+      "1": [
+        "Toxic Sewers",
+        "Corrupted Prison",
+        "Prison Depths"
+      ],
+      "2": [
+        "Toxic Sewers",
+        "Corrupted Prison",
+        "Prison Depths"
+      ],
+      "3": [
+        "Toxic Sewers",
+        "Corrupted Prison",
+        "Prison Depths"
+      ],
+      "4": [
+        "Toxic Sewers",
+        "Corrupted Prison",
+        "Prison Depths"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Insufferable Crypt"
+      ],
+      "1": [
+        "Insufferable Crypt"
+      ],
+      "2": [
+        "Insufferable Crypt"
+      ],
+      "3": [
+        "Insufferable Crypt"
+      ],
+      "4": [
+        "Insufferable Crypt"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 5,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 1.0,
+      "wandering": 0.1
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Treasure Chest"
+      ],
+      "2": [
+        "Treasure Chest"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": [
+        "Chained Items"
+      ]
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Corrupted Prison",
+    "wiki": "https://deadcells.wiki.gg/wiki/Corrupted_Prison",
+    "image": "https://deadcells.wiki.gg/images/Corrupted_Prison.png?358f61",
+    "desc": [
+      "\"Donating your body to science\" takes on a whole new meaning when you're still alive.",
+      "The guards were the first to succumb. Unless no one noticed the difference in the prisoners...",
+      "It's unthinkable that even the stones are infected."
+    ],
+    "dlc": null,
+    "type": "optional",
+    "level": 2.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Toxic Sewers",
+        "Castle's Outskirts"
+      ],
+      "1": [
+        "Toxic Sewers",
+        "Castle's Outskirts"
+      ],
+      "2": [
+        "Toxic Sewers",
+        "Castle's Outskirts"
+      ],
+      "3": [
+        "Toxic Sewers",
+        "Castle's Outskirts"
+      ],
+      "4": [
+        "Toxic Sewers",
+        "Castle's Outskirts"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Dracula's Castle (early)",
+        "Ancient Sewers"
+      ],
+      "1": [
+        "Dracula's Castle (early)",
+        "Ancient Sewers",
+        "Ramparts"
+      ],
+      "2": [
+        "Dracula's Castle (early)",
+        "Ancient Sewers",
+        "Ramparts"
+      ],
+      "3": [
+        "Dracula's Castle (early)",
+        "Ancient Sewers",
+        "Ramparts"
+      ],
+      "4": [
+        "Dracula's Castle (early)",
+        "Ancient Sewers",
+        "Ramparts"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "exit: Ramparts"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Dracula's Castle (early)",
+    "wiki": "https://deadcells.wiki.gg/wiki/Dracula%27s_Castle",
+    "image": "https://deadcells.wiki.gg/images/Dracula%27s_Castle.png?6f39df",
+    "desc": [
+      "All this red has the major benefit of hiding blood stains!",
+      "You feel like you don't belong here. The walls themselves seem to judge you",
+      "Imposing. Sinister. Sprawling. Red. All these adjectives fit this place"
+    ],
+    "dlc": "RtC",
+    "type": "standard",
+    "level": 3,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Castle's Outskirts",
+        "Corrupted Prison",
+        "Toxic Sewers"
+      ],
+      "1": [
+        "Castle's Outskirts",
+        "Corrupted Prison",
+        "Toxic Sewers"
+      ],
+      "2": [
+        "Castle's Outskirts",
+        "Corrupted Prison",
+        "Toxic Sewers"
+      ],
+      "3": [
+        "Castle's Outskirts",
+        "Corrupted Prison",
+        "Toxic Sewers"
+      ],
+      "4": [
+        "Castle's Outskirts",
+        "Corrupted Prison",
+        "Toxic Sewers"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Defiled Necropolis",
+        "Black Bridge"
+      ],
+      "1": [
+        "Defiled Necropolis",
+        "Black Bridge"
+      ],
+      "2": [
+        "Defiled Necropolis",
+        "Black Bridge"
+      ],
+      "3": [
+        "Defiled Necropolis",
+        "Black Bridge"
+      ],
+      "4": [
+        "Defiled Necropolis",
+        "Black Bridge"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 4,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Dracula's Castle (late)",
+    "wiki": "https://deadcells.wiki.gg/wiki/Dracula%27s_Castle",
+    "image": "https://deadcells.wiki.gg/images/Dracula%27s_Castle.png?6f39df",
+    "desc": [
+      "All this red has the major benefit of hiding blood stains!",
+      "You feel like you don't belong here. The walls themselves seem to judge you",
+      "Imposing. Sinister. Sprawling. Red. All these adjectives fit this place"
+    ],
+    "dlc": "RtC",
+    "type": "standard",
+    "level": 6,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Mausoleum",
+        "Clock Room",
+        "Guardian's Haven"
+      ],
+      "1": [
+        "Mausoleum",
+        "Clock Room",
+        "Guardian's Haven"
+      ],
+      "2": [
+        "Mausoleum",
+        "Clock Room",
+        "Guardian's Haven"
+      ],
+      "3": [
+        "Mausoleum",
+        "Clock Room",
+        "Guardian's Haven"
+      ],
+      "4": [
+        "Mausoleum",
+        "Clock Room",
+        "Guardian's Haven"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Master's Keep"
+      ],
+      "1": [
+        "Master's Keep"
+      ],
+      "2": [
+        "Master's Keep"
+      ],
+      "3": [
+        "Master's Keep"
+      ],
+      "4": [
+        "Master's Keep"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Black Bridge",
+    "wiki": "https://deadcells.wiki.gg/wiki/Black_Bridge",
+    "image": "https://deadcells.wiki.gg/images/Black_Bridge.png?43bb41",
+    "desc": [
+      "In the old days, the bridge linked the village to the prison and was only used on special occasions. In the old days...",
+      "Getting past the prison walls was a major achievement. Crossing the bridge was nothing short of a miracle.",
+      "They say the prison warden was personally involved in guarding the bridge. So they say...",
+      "There are stories that curious fisherman used the river to avoid the bridge and get closer to the prison. Most presumed they drowned."
+    ],
+    "dlc": null,
+    "type": "boss",
+    "level": 3.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Ramparts",
+        "Ossuary",
+        "Dracula's Castle (early)"
+      ],
+      "1": [
+        "Ramparts",
+        "Ossuary",
+        "Dracula's Castle (early)"
+      ],
+      "2": [
+        "Ramparts",
+        "Ossuary",
+        "Dracula's Castle (early)"
+      ],
+      "3": [
+        "Ramparts",
+        "Ossuary",
+        "Dracula's Castle (early)"
+      ],
+      "4": [
+        "Ramparts",
+        "Ossuary",
+        "Dracula's Castle (early)"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines"
+      ],
+      "1": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines"
+      ],
+      "2": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines"
+      ],
+      "3": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines"
+      ],
+      "4": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": 900
+  },
+  {
+    "name": "Insufferable Crypt",
+    "wiki": "https://deadcells.wiki.gg/wiki/Insufferable_Crypt",
+    "image": "https://deadcells.wiki.gg/images/Insufferable_Crypt.png?7bfe45",
+    "desc": [
+      "The guards stored a lot of things in this old crypt. Weapons, provisions... and chains, just in case.",
+      "Strange cries can be heard from the storehouse. Surely they're not human... No, no.",
+      "The King decided to convert this old crypt into a storehouse. After all, there was still plenty of room in the cemetery at the time.",
+      "Some of the guards tell of throwing bodies down there to feed her. Perhaps she just wanted to play?"
+    ],
+    "dlc": null,
+    "type": "boss",
+    "level": 3.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Ancient Sewers"
+      ],
+      "1": [
+        "Ancient Sewers"
+      ],
+      "2": [
+        "Ancient Sewers"
+      ],
+      "3": [
+        "Ancient Sewers",
+        "Ramparts"
+      ],
+      "4": [
+        "Ancient Sewers",
+        "Ramparts"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ],
+      "1": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ],
+      "2": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ],
+      "3": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ],
+      "4": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 5,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": 1170
+  },
+  {
+    "name": "Defiled Necropolis",
+    "wiki": "https://deadcells.wiki.gg/wiki/Defiled_Necropolis",
+    "image": "https://deadcells.wiki.gg/images/Defiled_Necropolis.png?c257dd",
+    "desc": [
+      "That's a LOT of dead people",
+      "Yes, the situation is positively dire but at least the sky is gorgeous!",
+      "Thousands of humans pulled from their eternal slumber to fuel an unholy ritual. Death must be stopped!",
+      "This site has been at the center of funeral rites for centuries. Now, it serves as a catalyst for the return of pure evil"
+    ],
+    "dlc": "RtC",
+    "type": "boss",
+    "level": 3.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Dracula's Castle (early)",
+        "Ossuary"
+      ],
+      "1": [
+        "Dracula's Castle (early)",
+        "Ossuary"
+      ],
+      "2": [
+        "Dracula's Castle (early)",
+        "Ossuary"
+      ],
+      "3": [
+        "Dracula's Castle (early)",
+        "Ossuary"
+      ],
+      "4": [
+        "Dracula's Castle (early)",
+        "Ossuary"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Slumbering Sanctuary",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "1": [
+        "Slumbering Sanctuary",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "2": [
+        "Slumbering Sanctuary",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "3": [
+        "Slumbering Sanctuary",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "4": [
+        "Slumbering Sanctuary",
+        "Stilt Village",
+        "Graveyard"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Nest",
+    "wiki": "https://deadcells.wiki.gg/wiki/Nest",
+    "image": "https://deadcells.wiki.gg/images/Nest.png?60e1dc",
+    "desc": [
+      "\"No prayers, no words, not even deeds can rightfully honour our protectress; only sacrifice means true loss, and hence, true belief\".The Sacred Barks, 20:1.",
+      "Since time immemorial religious rituals have proven themselves to be extremely useful tools for eliminating one's enemies. This one also helps to keep the ticks at bay.",
+      "Before dawn the Nest spills forth its wretched brood, ever hungry, hunting for their mother."
+    ],
+    "dlc": "TBS",
+    "type": "boss",
+    "level": 3.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Morass of the Banished"
+      ],
+      "1": [
+        "Morass of the Banished"
+      ],
+      "2": [
+        "Morass of the Banished"
+      ],
+      "3": [
+        "Morass of the Banished"
+      ],
+      "4": [
+        "Morass of the Banished"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Stilt Village",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "1": [
+        "Stilt Village",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "2": [
+        "Stilt Village",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "3": [
+        "Stilt Village",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "4": [
+        "Stilt Village",
+        "Graveyard",
+        "Fractured Shrines"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 4,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": 900
+  },
+  {
+    "name": "Master's Keep",
+    "wiki": "https://deadcells.wiki.gg/wiki/Master%27s_Keep",
+    "image": "https://deadcells.wiki.gg/images/Master%27s_Keep.png?6b61c0",
+    "desc": [
+      "The tension is so high, you can almost touch it. Nobody's welcome here",
+      "One needs an iron will when facing the Castle Master's imperious presence",
+      "Wooden stake: check. Garlic : at the ready. Silver: the banker said no",
+      "Ignoring for a moment the horrors fought on the way there and the problematic personality of its owner, this part of the Castle is magnificent!",
+      "This room of the Castle has had its fair share of epic fights between Good and Evil"
+    ],
+    "dlc": "RtC",
+    "type": "boss",
+    "level": 6.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Dracula's Castle (late)",
+        "High Peak Castle"
+      ],
+      "1": [
+        "Dracula's Castle (late)",
+        "High Peak Castle"
+      ],
+      "2": [
+        "Dracula's Castle (late)",
+        "High Peak Castle"
+      ],
+      "3": [
+        "Dracula's Castle (late)",
+        "High Peak Castle"
+      ],
+      "4": [
+        "Dracula's Castle (late)",
+        "High Peak Castle"
+      ]
+    },
+    "exits": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Stilt Village",
+    "wiki": "https://deadcells.wiki.gg/wiki/Stilt_Village",
+    "image": "https://deadcells.wiki.gg/images/Stilt_Village.png?f99b77",
+    "desc": [
+      "The village was first in line when the Malaise started to spread. At first they buried their dead. Before long, they were fighting them.",
+      "It was a lovely village in the old days. Before everything there was intent on devouring you.",
+      "Fishing was the main activity in this little hamlet, until the water started turning murky and dark.",
+      "Before, it took several days for the fish to get that putrid smell."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 4,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Black Bridge",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "1": [
+        "Black Bridge",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "2": [
+        "Black Bridge",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "3": [
+        "Black Bridge",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "4": [
+        "Black Bridge",
+        "Nest",
+        "Defiled Necropolis"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Undying Shores"
+      ],
+      "1": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Undying Shores"
+      ],
+      "2": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Undying Shores"
+      ],
+      "3": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Undying Shores"
+      ],
+      "4": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Undying Shores"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 0,
+        "fragment": 1,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 4,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0.75
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Treasure Chest"
+      ],
+      "2": [
+        "Treasure Chest"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Slumbering Sanctuary",
+    "wiki": "https://deadcells.wiki.gg/wiki/Slumbering_Sanctuary",
+    "image": "https://deadcells.wiki.gg/images/Slumbering_Sanctuary.png?36ad31",
+    "desc": [
+      "The Stilt Village was built over a sanctuary, but it's hard to say whether that was an intentional choice by the original colonists.",
+      "A mysterious energy runs through these walls, like blood through living veins.",
+      "Some villagers claimed that the sanctuary was alive, that it could make the earth quake. Legends often tend towards the absurd."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 4,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Black Bridge",
+        "Insufferable Crypt",
+        "Defiled Necropolis"
+      ],
+      "1": [
+        "Black Bridge",
+        "Insufferable Crypt",
+        "Defiled Necropolis"
+      ],
+      "2": [
+        "Black Bridge",
+        "Insufferable Crypt",
+        "Defiled Necropolis"
+      ],
+      "3": [
+        "Black Bridge",
+        "Insufferable Crypt",
+        "Defiled Necropolis"
+      ],
+      "4": [
+        "Black Bridge",
+        "Insufferable Crypt",
+        "Defiled Necropolis"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "1": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "2": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Cavern"
+      ],
+      "3": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Cavern"
+      ],
+      "4": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Cavern"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 1.1
+      },
+      "4": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 4,
+        "cursed": 1.1
+      }
+    },
+    "elites": {
+      "obelisk": 0.8,
+      "wandering": 0.2
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Treasure Chest"
+      ],
+      "2": [
+        "Chained Items",
+        "exit: Cavern"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Fractured Shrines",
+    "wiki": "https://deadcells.wiki.gg/wiki/Fractured_Shrines",
+    "image": "https://deadcells.wiki.gg/images/Fractured_Shrines.png?2f159d",
+    "desc": [
+      "The King barely tolerated these temples dedicated to foreign beliefs, to say the least.",
+      "One could say that the Fractured Shrines have become a real snake pit in recent times...",
+      "How could the ancients’ primitive technology build these giant swords? Some believe they originated from beyond the sea, others look to the sky while wearing funny hats.",
+      "The view is amazing, but the locals are said to be somewhat cantankerous until you get to know them.",
+      "Forcing the pagan cult out into the wild parts of the island was one of the rare edicts of the King that enjoyed unanimous support.",
+      "The King forbade his subjects from venturing into the Fractured Shrines for their own safety. A completely superfluous law given that no one wanted to go there anyway.",
+      "The King didn’t want his people to venture close to the Shrines, the Pagans didn’t want the people to venture close to the Shrines, the people didn’t want to venture close to the shrines..."
+    ],
+    "dlc": "FF",
+    "type": "standard",
+    "level": 4,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Black Bridge",
+        "Nest"
+      ],
+      "1": [
+        "Black Bridge",
+        "Nest"
+      ],
+      "2": [
+        "Black Bridge",
+        "Nest"
+      ],
+      "3": [
+        "Black Bridge",
+        "Nest"
+      ],
+      "4": [
+        "Black Bridge",
+        "Nest"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Undying Shores",
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "1": [
+        "Undying Shores",
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "2": [
+        "Undying Shores",
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "3": [
+        "Undying Shores",
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "4": [
+        "Undying Shores",
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 1,
+        "cursed": 1.1
+      },
+      "4": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 1.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Treasure Chest"
+      ],
+      "2": [
+        "Treasure Chest"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Graveyard",
+    "wiki": "https://deadcells.wiki.gg/wiki/Graveyard",
+    "image": "https://deadcells.wiki.gg/images/Graveyard.png?8af6f8",
+    "desc": [
+      "The local villagers came to pay their respects to their lost loved ones. The current population of the village has a different relationship with the graveyard.",
+      "The only people buried in the graveyard are unknown villagers, far too common to deserve a place in the sepulcher.",
+      "The dead have been buried in the Valley for generations. Now it seems there's something of a shortage of space."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 4,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Insufferable Crypt",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "1": [
+        "Insufferable Crypt",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "2": [
+        "Insufferable Crypt",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "3": [
+        "Insufferable Crypt",
+        "Nest",
+        "Defiled Necropolis"
+      ],
+      "4": [
+        "Insufferable Crypt",
+        "Nest",
+        "Defiled Necropolis"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Forgotten Sepulcher",
+        "Cavern",
+        "Undying Shores",
+        "Clock Tower"
+      ],
+      "1": [
+        "Forgotten Sepulcher",
+        "Cavern",
+        "Undying Shores",
+        "Clock Tower"
+      ],
+      "2": [
+        "Forgotten Sepulcher",
+        "Cavern",
+        "Undying Shores",
+        "Clock Tower"
+      ],
+      "3": [
+        "Forgotten Sepulcher",
+        "Cavern",
+        "Undying Shores",
+        "Clock Tower"
+      ],
+      "4": [
+        "Forgotten Sepulcher",
+        "Cavern",
+        "Undying Shores",
+        "Clock Tower"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "1": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "2": {
+        "power": 2,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 1.1
+      },
+      "4": {
+        "power": 3,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 1.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Chained Items"
+      ],
+      "2": [
+        "Food Shop"
+      ],
+      "3": [],
+      "4": [
+        "Chained Items"
+      ]
+    },
+    "timed_door": 1170
+  },
+  {
+    "name": "Clock Tower",
+    "wiki": "https://deadcells.wiki.gg/wiki/Clock_Tower",
+    "image": "https://deadcells.wiki.gg/images/Clock_Tower.png?111123",
+    "desc": [
+      "The Time Keeper hasn't been seen for a long time. Or else very recently... Uh, wait a minute... When is now?",
+      "The first few hours in this tower can cause nausea, what with everything contracting and dilating at the same time.",
+      "Some villagers claim to have seen the hands of the clock turning backward. Of course, those are just rumours...",
+      "A long time ago the Time Keeper obtained the King's permission to build this gigantic tower. No one knows the terms of the agreement."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines",
+        "Graveyard"
+      ],
+      "1": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines",
+        "Graveyard"
+      ],
+      "2": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines",
+        "Graveyard"
+      ],
+      "3": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines",
+        "Graveyard"
+      ],
+      "4": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Fractured Shrines",
+        "Graveyard"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Clock Room"
+      ],
+      "1": [
+        "Clock Room"
+      ],
+      "2": [
+        "Clock Room"
+      ],
+      "3": [
+        "Clock Room"
+      ],
+      "4": [
+        "Clock Room"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 5,
+        "dual": 2,
+        "fragment": 4,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0.4,
+      "wandering": 1.0
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Weapon/Skill Shop"
+      ],
+      "2": [
+        "Cell Vat"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Forgotten Sepulcher",
+    "wiki": "https://deadcells.wiki.gg/wiki/Forgotten_Sepulcher",
+    "image": "https://deadcells.wiki.gg/images/Forgotten_Sepulcher.png?e5a87f",
+    "desc": [
+      "High-ranking dignitaries were embalmed in sarcophagi. After a somewhat brutal ceremony, the skulls of their delegation were used to decorate the walls of the chamber.",
+      "Once reserved for high-ranking dignitaries, the sepulcher became a tortuous labyrinth, its reaches fading into obscurity and myth...",
+      "To get out alive, simply follow the light. No, not that one, the other... Yes, there, the... No, uh... Wait a minute, where are we?"
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "1": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "2": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "3": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Graveyard",
+        "Fractured Shrines"
+      ],
+      "4": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Graveyard",
+        "Fractured Shrines"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Clock Room"
+      ],
+      "1": [
+        "Clock Room"
+      ],
+      "2": [
+        "Clock Room",
+        "Guardian's Haven"
+      ],
+      "3": [
+        "Clock Room",
+        "Guardian's Haven"
+      ],
+      "4": [
+        "Clock Room",
+        "Guardian's Haven"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "1": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "2": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 1.1
+      },
+      "3": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 1.1
+      },
+      "4": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 1.1
+      }
+    },
+    "elites": {
+      "obelisk": 0.5,
+      "wandering": 0.5
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [
+        "Chained Items",
+        "exit: Guardian's Haven"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": []
+    },
+    "timed_door": 1560
+  },
+  {
+    "name": "Undying Shores",
+    "wiki": "https://deadcells.wiki.gg/wiki/Undying_Shores",
+    "image": "https://deadcells.wiki.gg/images/Undying_Shores.png?6a5175",
+    "desc": [
+      "No one really knows what the habitants of the Undying Shores were accused of. After all, \"crimes against the crown\" can mean many things.",
+      "Apostates were respected healers before the King chased them from the island. In spite of their medical advancements, some found their methods unpalatable.",
+      "Knowledge progresses much faster without moral constraints. Apostates have become very knowledgeable.",
+      "The most senior of the King’s medical advisors was put to death. No one knows exactly why, some say he failed the King, some say he was caught robbing graves.",
+      "This hideout was used by smugglers before it served as an escape from the King’s wrath. The smugglers were rather disgruntled by the development of events.",
+      "Beyond their gruesome but physical experiments, the Apostates seem to have been tampering with some of the more ancient artefacts present on the coast of the Island.",
+      "Even before the Malaise outbreak really took hold on the Island, there were rumors of strange experiments and sightings of vile creatures close to the Shores.",
+      "Who said the dead were useless?"
+    ],
+    "dlc": "FF",
+    "type": "standard",
+    "level": 5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Fractured Shrines",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "1": [
+        "Fractured Shrines",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "2": [
+        "Fractured Shrines",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "3": [
+        "Fractured Shrines",
+        "Stilt Village",
+        "Graveyard"
+      ],
+      "4": [
+        "Fractured Shrines",
+        "Stilt Village",
+        "Graveyard"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Mausoleum"
+      ],
+      "1": [
+        "Mausoleum"
+      ],
+      "2": [
+        "Mausoleum"
+      ],
+      "3": [
+        "Mausoleum"
+      ],
+      "4": [
+        "Mausoleum"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 3,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 5,
+        "dual": 2,
+        "fragment": 4,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 1.0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Cavern",
+    "wiki": "https://deadcells.wiki.gg/wiki/Cavern",
+    "image": "https://deadcells.wiki.gg/images/Cavern.png?960368",
+    "desc": [
+      "The Cave is a strange place where ice and fire coexist. The Alchemist never found out how.",
+      "Mining was the most thankless job on the island. Many died buried under rubble, suffocated by toxic vapor, or killed by strange creatures...",
+      "Precious crystals were unearthed from this cave on the King's orders. Nobody knows what they were used for.",
+      "Longest time without incident: 45 seconds."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Graveyard"
+      ],
+      "1": [
+        "Graveyard"
+      ],
+      "2": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ],
+      "3": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ],
+      "4": [
+        "Graveyard",
+        "Slumbering Sanctuary"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "1": [
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "2": [
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "3": [
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "4": [
+        "Guardian's Haven",
+        "Mausoleum"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "1": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "2": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.1
+      },
+      "3": {
+        "power": 4,
+        "dual": 2,
+        "fragment": 4,
+        "cursed": 0.1
+      },
+      "4": {
+        "power": 5,
+        "dual": 2,
+        "fragment": 5,
+        "cursed": 0.1
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [
+        "Treasure Chest"
+      ],
+      "2": [
+        "Treasure Chest"
+      ],
+      "3": [
+        "Chained Items"
+      ],
+      "4": [
+        "Festive Outfit"
+      ]
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Clock Room",
+    "wiki": "https://deadcells.wiki.gg/wiki/Clock_Room",
+    "image": "https://deadcells.wiki.gg/images/Clock_Room.png?776c7c",
+    "desc": [
+      "An error of just a thousandth of a second in the calibration of the clock could have serious consequences.",
+      "It's in this room that the Time K... No, it was in this room that... No, in this room the Time Keeper will... Hold on, where were we when?",
+      "The Time Keeper overlooks almost the whole island from here. The whole island, except the king's castle."
+    ],
+    "dlc": null,
+    "type": "boss",
+    "level": 5.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "1": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "2": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "3": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ],
+      "4": [
+        "Clock Tower",
+        "Forgotten Sepulcher"
+      ]
+    },
+    "exits": {
+      "0": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "1": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "2": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "3": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "4": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Guardian's Haven",
+    "wiki": "https://deadcells.wiki.gg/wiki/Guardian%27s_Haven",
+    "image": "https://deadcells.wiki.gg/images/Guardian%27s_Haven.png?f8a011",
+    "desc": [
+      "It is said that sobbing was sometimes heard coming from this lair. The Giant seemed to be a sensitive person...",
+      "The Giant didn't like the Hand of the King, and the Hand of the King didn't like the Giant. But they did agree on one point: nobody liked the Alchemist.",
+      "The Giant came often to the bottom of the Cave to recharge. Nothing beats a good lava bath."
+    ],
+    "dlc": null,
+    "type": "boss",
+    "level": 5.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Cavern"
+      ],
+      "1": [
+        "Cavern"
+      ],
+      "2": [
+        "Cavern",
+        "Forgotten Sepulcher"
+      ],
+      "3": [
+        "Cavern",
+        "Forgotten Sepulcher"
+      ],
+      "4": [
+        "Cavern",
+        "Forgotten Sepulcher"
+      ]
+    },
+    "exits": {
+      "0": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Throne Room",
+        "Dracula's Castle (late)"
+      ],
+      "1": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Throne Room",
+        "Dracula's Castle (late)"
+      ],
+      "2": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Throne Room",
+        "Dracula's Castle (late)"
+      ],
+      "3": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Throne Room",
+        "Dracula's Castle (late)"
+      ],
+      "4": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Throne Room",
+        "Dracula's Castle (late)"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 4,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Mausoleum",
+    "wiki": "https://deadcells.wiki.gg/wiki/Mausoleum",
+    "image": "https://deadcells.wiki.gg/images/Mausoleum.png?fc5ee1",
+    "desc": [
+      "Before the Malaise, The Scarecrow was a world-famous botanist.",
+      "The birds aren’t the only ones that seem to fear what “lives” here.",
+      "Obsessions in life don't just stop after death.",
+      "\"Roses are red and violets are blue. I’m dead and soon you'll be too.\""
+    ],
+    "dlc": "FF",
+    "type": "boss",
+    "level": 5.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Undying Shores",
+        "Cavern"
+      ],
+      "1": [
+        "Undying Shores",
+        "Cavern"
+      ],
+      "2": [
+        "Undying Shores",
+        "Cavern"
+      ],
+      "3": [
+        "Undying Shores",
+        "Cavern"
+      ],
+      "4": [
+        "Undying Shores",
+        "Cavern"
+      ]
+    },
+    "exits": {
+      "0": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "1": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "2": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "3": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ],
+      "4": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck",
+        "Dracula's Castle (late)"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 2,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "High Peak Castle",
+    "wiki": "https://deadcells.wiki.gg/wiki/High_Peak_Castle",
+    "image": "https://deadcells.wiki.gg/images/High_Peak_Castle.png?472ece",
+    "desc": [
+      "The royal guard stayed locked up safely behind the walls of High Peak Castle, thereby leading the island to its ruin.",
+      "High Peak has fallen from its former glory... The last \"banquet\" held here served up human flesh.",
+      "The island's high-ranking personalities came here to discuss important issues with the King. The quality of the visitors has changed a lot in recent times.",
+      "The King allowed the Alchemist to move into a wing of the castle. That was around the time of the final retreat."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 6,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "1": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "2": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "3": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "4": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Throne Room",
+        "Master's Keep"
+      ],
+      "1": [
+        "Throne Room",
+        "Master's Keep"
+      ],
+      "2": [
+        "Throne Room",
+        "Master's Keep"
+      ],
+      "3": [
+        "Throne Room",
+        "Master's Keep"
+      ],
+      "4": [
+        "Throne Room",
+        "Master's Keep"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0.6
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Derelict Distillery",
+    "wiki": "https://deadcells.wiki.gg/wiki/Derelict_Distillery",
+    "image": "https://deadcells.wiki.gg/images/Derelict_Distillery.png?6dbc12",
+    "desc": [
+      "Inhaling the chemical vapours that often filled that warehouse was said to cause hallucinations. Some of the workers even reported barrels moving by themselves.",
+      "Unplanned explosions ended up weakening the walls of the warehouse.",
+      "Nobody likes to be treated as cannon fodder. Well, at least, the barrels didn’t like it.",
+      "Workplace incidents went through the roof when the distillery was converted into a powder keg factory."
+    ],
+    "dlc": null,
+    "type": "standard",
+    "level": 6,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "1": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "2": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "3": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "4": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Throne Room",
+        "Lighthouse"
+      ],
+      "1": [
+        "Throne Room",
+        "Lighthouse"
+      ],
+      "2": [
+        "Throne Room",
+        "Lighthouse"
+      ],
+      "3": [
+        "Throne Room",
+        "Lighthouse"
+      ],
+      "4": [
+        "Throne Room",
+        "Lighthouse"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.05
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.05
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.05
+      },
+      "3": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.05
+      },
+      "4": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.05
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Infested Shipwreck",
+    "wiki": "https://deadcells.wiki.gg/wiki/Infested_Shipwreck",
+    "image": "https://deadcells.wiki.gg/images/Infested_Shipwreck.png?f9ad92",
+    "desc": [
+      "A creaking heap of driftwood. Surely nothing bad can come out of it.",
+      "In the sea, no one can hear you scream.",
+      "Ships were freely coming and going to the island before the Lighthouse was extinguished.",
+      "Ph'nglui mglw'nafh staphy dobor wgah'nagl fhtagn."
+    ],
+    "dlc": "TQatS",
+    "type": "standard",
+    "level": 6,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "1": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "2": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "3": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ],
+      "4": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Lighthouse"
+      ],
+      "1": [
+        "Lighthouse"
+      ],
+      "2": [
+        "Lighthouse"
+      ],
+      "3": [
+        "Lighthouse"
+      ],
+      "4": [
+        "Lighthouse"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 2,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 1,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 3,
+        "dual": 2,
+        "fragment": 2,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0.5
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [
+        "Treasure Chest"
+      ],
+      "3": [
+        "Treasure Chest"
+      ],
+      "4": [
+        "Chained Items"
+      ]
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Throne Room",
+    "wiki": "https://deadcells.wiki.gg/wiki/Throne_Room",
+    "image": "https://deadcells.wiki.gg/images/Throne_Room.png?b24aa7",
+    "desc": [
+      "The King's throne was sculpted right out of the rock where it sits. Many months of work went into its exquisite details.",
+      "The Hand of the King has lived here as a recluse for a very long time... No one really knows what he eats.",
+      "One can admire the full splendor of the island from this vantage point. And the full extent of its infection by the Malaise."
+    ],
+    "dlc": null,
+    "type": "boss",
+    "level": 6.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Guardian's Haven"
+      ],
+      "1": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Guardian's Haven"
+      ],
+      "2": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Guardian's Haven"
+      ],
+      "3": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Guardian's Haven"
+      ],
+      "4": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Guardian's Haven"
+      ]
+    },
+    "exits": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [
+        "Astrolab"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Lighthouse",
+    "wiki": "https://deadcells.wiki.gg/wiki/Lighthouse",
+    "image": "https://deadcells.wiki.gg/images/Lighthouse.png?ae5c47",
+    "desc": [
+      "Formerly used to lead the ships coming to the island, the beacon has long been snuffed out.",
+      "No one knows who extinguished the flame. None of those that tried to investigate the matter ever returned either.",
+      "Rumor has it that before the outbreak, certain spots of the shoreline were highly sought-after by the island's aristocracy. Less so today.",
+      "Once easily accessible from the center of the island, the Lighthouse is now insulated by a mound of wreckages."
+    ],
+    "dlc": "TQatS",
+    "type": "boss",
+    "level": 6.5,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Infested Shipwreck",
+        "Derelict Distillery"
+      ],
+      "1": [
+        "Infested Shipwreck",
+        "Derelict Distillery"
+      ],
+      "2": [
+        "Infested Shipwreck",
+        "Derelict Distillery"
+      ],
+      "3": [
+        "Infested Shipwreck",
+        "Derelict Distillery"
+      ],
+      "4": [
+        "Infested Shipwreck",
+        "Derelict Distillery"
+      ]
+    },
+    "exits": {
+      "0": [
+        "The Crown"
+      ],
+      "1": [
+        "The Crown"
+      ],
+      "2": [
+        "The Crown"
+      ],
+      "3": [
+        "The Crown"
+      ],
+      "4": [
+        "The Crown"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 1,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 3,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Astrolab",
+    "wiki": "https://deadcells.wiki.gg/wiki/Astrolab",
+    "image": "https://deadcells.wiki.gg/images/Astrolab.png?8d041d",
+    "desc": [
+      "This is where most of the experiments to find a cure... failed.",
+      "Some test subjects are still roaming this part of the island. This is why the King ordered the main gate closed.",
+      "Experiment number 463 was horrible! Number 464 will blow your mind!",
+      "No animals were harmed while researching for a cure against the Malaise, promise."
+    ],
+    "dlc": "RotG",
+    "type": "standard",
+    "level": 7,
+    "is_spoiler": true,
+    "entrances": {
+      "0": [
+        "Throne Room"
+      ],
+      "1": [
+        "Throne Room"
+      ],
+      "2": [
+        "Throne Room"
+      ],
+      "3": [
+        "Throne Room"
+      ],
+      "4": [
+        "Throne Room"
+      ]
+    },
+    "exits": {
+      "0": [
+        "Observatory"
+      ],
+      "1": [
+        "Observatory"
+      ],
+      "2": [
+        "Observatory"
+      ],
+      "3": [
+        "Observatory"
+      ],
+      "4": [
+        "Observatory"
+      ]
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 2,
+        "fragment": 0,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "The Crown",
+    "wiki": "https://deadcells.wiki.gg/wiki/The_Crown",
+    "image": "https://deadcells.wiki.gg/images/The_Crown.png?f328ce",
+    "desc": [
+      "You have a clear view of the island's coast from here. Broken ships here, broken ships there...",
+      "No one knows who and what the statues forming a circle at the top of the tower are meant to depict. They sure look solemn, though.",
+      "As life on the island went extinct, so too did the beacon of the Lighthouse. How tragic.",
+      "What a romantic setting! Watching the sunrise from here must be worth its while."
+    ],
+    "dlc": "TQatS",
+    "type": "boss",
+    "level": 8,
+    "is_spoiler": false,
+    "entrances": {
+      "0": [
+        "Lighthouse"
+      ],
+      "1": [
+        "Lighthouse"
+      ],
+      "2": [
+        "Lighthouse"
+      ],
+      "3": [
+        "Lighthouse"
+      ],
+      "4": [
+        "Lighthouse"
+      ]
+    },
+    "exits": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  },
+  {
+    "name": "Observatory",
+    "wiki": "https://deadcells.wiki.gg/wiki/Observatory",
+    "image": "https://deadcells.wiki.gg/images/Observatory.png?9eaf7e",
+    "desc": [
+      "The Alchemist mysteriously disappeared after the utter failure of his research.",
+      "The Observatory was state-of-the-art, and used only by the scientific elite of the island, which is to say, only the Alchemist.",
+      "The King's Alchemist used to conduct research on astronomy and astrology here (he was such a Sagittarius)."
+    ],
+    "dlc": "RotG",
+    "type": "boss",
+    "level": 8,
+    "is_spoiler": true,
+    "entrances": {
+      "0": [
+        "Astrolab"
+      ],
+      "1": [
+        "Astrolab"
+      ],
+      "2": [
+        "Astrolab"
+      ],
+      "3": [
+        "Astrolab"
+      ],
+      "4": [
+        "Astrolab"
+      ]
+    },
+    "exits": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "scrolls": {
+      "0": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "1": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "2": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "3": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      },
+      "4": {
+        "power": 0,
+        "dual": 0,
+        "fragment": 0,
+        "cursed": 0.0
+      }
+    },
+    "elites": {
+      "obelisk": 0,
+      "wandering": 0
+    },
+    "doors": {
+      "0": [],
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "timed_door": null
+  }
+]

@@ -19,7 +19,8 @@ class Elite:
 class Biome:
     name: str
     wiki: str
-    image: str
+    image: List[str]
+    desc: str
     dlc: str
     type: str
     level: float
@@ -30,11 +31,6 @@ class Biome:
     elites: Elite = field(default_factory=Elite)
     doors: Dict[int, List[str]] = field(default_factory=dict)
     timed_door: Optional[int] = None
-
-@dataclass
-class Biomes:
-    wiki_base: str
-    biomes: List[Biome] = field(default_factory=list)
 
 scroll_adapter = lambda scrolls, fragments, cursed_chests: Scroll(
     power = next((item["amount"] for item in scrolls if item["type"] == "Scrolls of Power"), 0),
@@ -66,7 +62,7 @@ with open("scripts/_hierarchy.json", "r") as f:
 castle_generic_name = "Dracula's Castle"
 castle_early_name = "Dracula's Castle (early)"
 castle_late_name = "Dracula's Castle (late)"
-biomes = Biomes(wiki_base = "https://deadcells.wiki.gg")
+biomes: List[Biome] = []
 for biome_src in biomes_src:
     if biome_src.get('name') == castle_generic_name:
         hierarchy_early = biomes_hierarchy.get(castle_early_name)
@@ -75,6 +71,7 @@ for biome_src in biomes_src:
             name = castle_early_name,
             wiki = biome_src.get('wiki'),
             image = biome_src.get('image'),
+            desc = biome_src.get('description'),
             dlc = biome_src.get('dlc'),
             type = hierarchy_early.get('type'),
             level = hierarchy_early.get('level'),
@@ -84,6 +81,7 @@ for biome_src in biomes_src:
             name = castle_late_name,
             wiki = biome_src.get('wiki'),
             image = biome_src.get('image'),
+            desc = biome_src.get('description'),
             dlc = biome_src.get('dlc'),
             type = hierarchy_late.get('type'),
             level = hierarchy_late.get('level'),
@@ -119,8 +117,8 @@ for biome_src in biomes_src:
 
         depth3.timed_door = depth6.timed_door = biome_src.get('timed_door')
 
-        biomes.biomes.append(depth3)
-        biomes.biomes.append(depth6)
+        biomes.append(depth3)
+        biomes.append(depth6)
     
     else:
         name = biome_src.get('name')
@@ -129,6 +127,7 @@ for biome_src in biomes_src:
             name = name,
             wiki = biome_src.get('wiki'),
             image = biome_src.get('image'),
+            desc = biome_src.get('description'),
             dlc = biome_src.get('dlc'),
             type = hierarchy.get('type'),
             level = hierarchy.get('level'),
@@ -153,19 +152,19 @@ for biome_src in biomes_src:
 
         biome.timed_door = biome_src.get('timed_door')
 
-        biomes.biomes.append(biome)
+        biomes.append(biome)
 
 for castle_name in [castle_early_name, castle_late_name]:
-    castle = next(biome for biome in biomes.biomes if biome.name == castle_name)
+    castle = next(biome for biome in biomes if biome.name == castle_name)
     for bc in range(5):
         for entrance_name in castle.entrances[bc]:
-            entrance = next(biome for biome in biomes.biomes if biome.name == entrance_name)
+            entrance = next(biome for biome in biomes if biome.name == entrance_name)
             for key, values in entrance.exits.items():
                 entrance.exits[key] = [castle_name if v == castle_generic_name else v for v in values]
         for exit_name in castle.exits[bc]:
-            exit = next(biome for biome in biomes.biomes if biome.name == exit_name)
+            exit = next(biome for biome in biomes if biome.name == exit_name)
             for key, values in exit.entrances.items():
                 exit.entrances[key] = [castle_name if v == castle_generic_name else v for v in values]
 
 with open('public/biomes.json', 'x') as f:
-    json.dump(asdict(biomes), f)
+    json.dump([asdict(b) for b in biomes], f, ensure_ascii=False, indent=2)

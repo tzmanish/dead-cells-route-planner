@@ -4,17 +4,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-dc-dark: #101524;
-  --color-dc-header: color-mix(in srgb, var(--color-dc-dark), transparent 10%);
-  --color-dc-red: #a40239;
-  --color-dc-gold: #f9cf87;
-  --color-dc-gold-light: #f9e6c6;
-  --color-dc-gold-dark: color-mix(in srgb, var(--color-dc-gold), transparent 80%);
-  --color-dc-gray: #888a92;
-  --color-dc-separator: #263151;
-  --font-title: "ATC Krueger Regular";
-  --font-body: "Raleway", sans-serif;
-  --font-heading: "ATC Krueger Regular";
+    --color-dc-dark: #101524;
+    --color-dc-header: color-mix(in srgb, var(--color-dc-dark), transparent 10%);
+    --color-dc-red: #a40239;
+    --color-dc-gold: #f9cf87;
+    --color-dc-gold-light: #f9e6c6;
+    --color-dc-gold-dark: color-mix(in srgb, var(--color-dc-gold), transparent 80%);
+    --color-dc-gray: #888a92;
+    --color-dc-separator: #263151;
+    --font-title: "ATC Krueger Regular";
+    --font-body: "Raleway", sans-serif;
+    --font-heading: "ATC Krueger Regular";
 }
 
 body {
@@ -26,25 +26,16 @@ body {
 @utility shadow-dc { box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.9); }
 @utility banner-dc {
     @apply text-dc-gold-light;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px, rgba(0,0,0,0.5) calc(100% - 12px), rgba(0,0,0,0.8)); 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.5) 12px, rgba(0,0,0,0.5) calc(100% - 12px), rgba(0,0,0,0.8));
 }
-@utility radio-dc {
-    @apply w-4 h-4 cursor-pointer accent-dc-red;
-}
+@utility radio-dc { @apply w-4 h-4 cursor-pointer accent-dc-red; }
 @utility link-dc {
     @apply text-dc-gold hover:text-dc-gold-light hover:underline;
     text-decoration: none;
     transition: color 0.2s;
 }
-@utility btn-dc {
-    @apply block text-center shadow-[0_0_16px_rgba(0,0,0,0.75)] py-2 px-12 border-none cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed
-}
-@utility btn-dc-primary {
-    @apply btn-dc bg-dc-red/80 text-dc-gold
-}
-@utility btn-dc-secondary {
-    @apply btn-dc bg-dc-dark/80 border-none text-white
-}
-@utility checkbox-dc {
-    @apply w-4 h-4 cursor-pointer accent-dc-red;
-}
+@utility btn-dc { @apply block text-center shadow-[0_0_16px_rgba(0,0,0,0.75)] py-2 px-12 border-none cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed; }
+@utility btn-dc-primary { @apply btn-dc bg-dc-red/80 text-dc-gold; }
+@utility btn-dc-secondary { @apply btn-dc bg-dc-dark/80 border-none text-white; }
+@utility checkbox-dc { @apply w-4 h-4 cursor-pointer accent-dc-red; }
+@utility has-info { @apply border-b border-dotted border-b-[1px] leading-none; }
