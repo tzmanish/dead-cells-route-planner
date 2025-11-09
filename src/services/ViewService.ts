@@ -1,11 +1,29 @@
-import { ViewStrategy } from "../models/View.js";
+import { DynamicView } from "../components/viewRenderers/DynamicView.js";
+import { errorView } from "../components/viewRenderers/ErrorView.js";
+import { StaticView } from "../components/viewRenderers/StaticView.js";
+import { ViewStrategy, type ViewRenderer } from "../models/View.js";
+import { eventEmitter } from "./EventEmitterService.js";
 import { localStorageService } from "./LocalStorageService.js";
 
 class ViewService {
     private viewStrategy!: ViewStrategy;
+    private viewStrategyCreatorMapping = new Map<ViewStrategy, new () => ViewRenderer>([
+        [ViewStrategy.Static, StaticView],
+        [ViewStrategy.Dynamic, DynamicView]
+    ]);
+    private viewStrategyRenderer: Map<ViewStrategy, ViewRenderer> = new Map();
 
     constructor() {
         this.loadFromStorage();
+    }
+
+    private getRenderer(): ViewRenderer {
+        if(!this.viewStrategyRenderer.has(this.viewStrategy)) {
+            const ctor = this.viewStrategyCreatorMapping.get(this.viewStrategy);
+            if(ctor) this.viewStrategyRenderer.set(this.viewStrategy, new ctor());
+            else return errorView;
+        }
+        return this.viewStrategyRenderer.get(this.viewStrategy) || errorView;
     }
 
     private loadFromStorage() {
@@ -27,8 +45,14 @@ class ViewService {
     }
 
     public setStrategy(viewStrategy: ViewStrategy) {
+        this.getRenderer().clear();
         this.viewStrategy = viewStrategy;
         this.saveToStorage();
+        eventEmitter.emit('view-update');
+    }
+
+    public getView(): HTMLElement {
+        return this.getRenderer().render();
     }
 }
 

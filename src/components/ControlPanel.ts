@@ -159,7 +159,6 @@ function ViewStrategyToggle(): HTMLElement {
   checkbox.name = 'view-strategy'
   checkbox.className = 'checkbox-dc'
   checkbox.checked = viewService.getStrategy() == ViewStrategy.Dynamic;
-  checkbox.disabled = true;
 
   const span = document.createElement('span')
   span.className = 'text-dc-gold text-sm'

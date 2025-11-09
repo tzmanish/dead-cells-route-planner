@@ -32,12 +32,18 @@ class EventEmitterService {
         }
     }
 
-    clear(event?: string): void {
+    clear(event?: string, callback?: Function): void {
         if (event) {
-            this.listeners.delete(event);
-        } else {
-            this.listeners.clear();
-        }
+            if (callback) {
+                const eventListeners = this.listeners.get(event);
+                if (eventListeners) {
+                    eventListeners.delete(callback);
+                    if (eventListeners.size === 0) this.listeners.delete(event);
+                }
+            } 
+            else this.listeners.delete(event);
+        } 
+        else  this.listeners.clear();
     }
 }
 

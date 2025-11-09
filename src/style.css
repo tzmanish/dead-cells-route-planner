@@ -30,7 +30,7 @@ body {
 }
 @utility radio-dc { @apply w-4 h-4 cursor-pointer accent-dc-red; }
 @utility link-dc {
-    @apply text-dc-gold hover:text-dc-gold-light hover:underline;
+    @apply text-dc-gold hover:text-dc-gold-light hover:underline cursor-pointer;
     text-decoration: none;
     transition: color 0.2s;
 }
