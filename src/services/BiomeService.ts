@@ -44,15 +44,21 @@ export class BiomeService {
     }
 }
 
+let initPromise: Promise<BiomeService> | null = null;
 async function initBiomeService(): Promise<BiomeService> {
-    try {
-        const response = await fetch(import.meta.env.BASE_URL + 'biomes.json');
-        const data: Biome[] = await response.json();
-        return new BiomeService(data);
-    } catch (error) {
-        console.error('Failed to load biome data:', error);
-        throw error;
-    }
+    if(initPromise) return initPromise;
+    initPromise = fetch(import.meta.env.BASE_URL + 'biomes.json')
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.json()
+        })
+        .then(biomes => new BiomeService(biomes))
+        .catch (error => {
+            initPromise = null;
+            console.error('Failed to load biome data:', error);
+            throw error;
+        });
+    return initPromise;
 }
 
-export const biomeServiceReference = initBiomeService();
+export const biomeService = await initBiomeService();

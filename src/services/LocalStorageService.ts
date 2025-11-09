@@ -1,8 +1,11 @@
+import type { ViewStrategy } from "../models/View";
+
 class LocalStorageService {
     private readonly STORAGE_KEYS = {
         ENABLED_DLCS: 'dead-cells-enabled-dlcs',
         DIFFICULTY: 'dead-cells-difficulty',
-        SPOILER_PROTECTION: 'dead-cells-spoiler-protection'
+        SPOILER_PROTECTION: 'dead-cells-spoiler-protection',
+        VIEW_STRATEGY: 'dead-cells-planner-view'
     };
 
     // DLC methods
@@ -57,6 +60,24 @@ class LocalStorageService {
             return stored !== null ? JSON.parse(stored) : null;
         } catch (error) {
             console.error('Failed to load spoiler protection from localStorage:', error);
+            return null;
+        }
+    }
+
+    saveViewStrategy(viewStrategy: ViewStrategy) {
+        try {
+            localStorage.setItem(this.STORAGE_KEYS.VIEW_STRATEGY, JSON.stringify(viewStrategy));
+        } catch (error) {
+            console.error('Failed to save view strategy to localStorage:', error);
+        }
+    }
+
+    loadViewStrategy(): ViewStrategy | null {
+        try {
+            const stored = localStorage.getItem(this.STORAGE_KEYS.VIEW_STRATEGY);
+            return stored !== null ? JSON.parse(stored) : null;
+        } catch (error) {
+            console.error('Failed to load view strategy from localStorage:', error);
             return null;
         }
     }

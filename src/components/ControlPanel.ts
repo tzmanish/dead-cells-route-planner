@@ -4,11 +4,14 @@ import { Difficulty } from "../models/Difficulty"
 import { DLC } from "../models/Dlc"
 import { spoilerProtectionService } from "../services/SpoilerProtectionService"
 import { eventEmitter } from "../services/EventEmitterService"
+import { viewService } from "../services/ViewService"
+import { ViewStrategy } from "../models/View"
 
 interface FormState {
   difficulty: Difficulty
   dlcs: Set<DLC>
   spoilerProtection: boolean
+  viewStrategy: ViewStrategy
 }
 
 function getFormState(form: HTMLFormElement): FormState {
@@ -22,21 +25,24 @@ function getFormState(form: HTMLFormElement): FormState {
   })
 
   const spoilerProtection = formData.get('spoiler-protection') === 'on'
+  const viewStrategy = formData.get('view-strategy') === 'on'? ViewStrategy.Dynamic: ViewStrategy.Static
 
-  return { difficulty, dlcs, spoilerProtection }
+  return { difficulty, dlcs, spoilerProtection, viewStrategy }
 }
 
 function getSavedState(): FormState {
   return {
     difficulty: difficultyService.getCurrent(),
     dlcs: new Set(dlcService.getEnabled()),
-    spoilerProtection: spoilerProtectionService.isEnabled()
+    spoilerProtection: spoilerProtectionService.isEnabled(),
+    viewStrategy: viewService.getStrategy()
   }
 }
 
 function hasChanges(formState: FormState, savedState: FormState): boolean {
   if (formState.difficulty !== savedState.difficulty) return true
   if (formState.spoilerProtection !== savedState.spoilerProtection) return true
+  if (formState.viewStrategy !== savedState.viewStrategy) return true
   
   if (formState.dlcs.size !== savedState.dlcs.size) return true
   for (const dlc of formState.dlcs) {
@@ -46,9 +52,14 @@ function hasChanges(formState: FormState, savedState: FormState): boolean {
   return false
 }
 
-function DifficultySelector(): HTMLElement {
+function createContainer(): HTMLElement {
   const container = document.createElement('div')
   container.className = 'flex flex-col items-start gap-1 py-2 px-6'
+  return container;
+}
+
+function DifficultySelector(): HTMLElement {
+  const container = createContainer();
 
   const label = document.createElement('p')
   label.className = 'text-dc-gold text-sm text-left'
@@ -85,8 +96,7 @@ function DifficultySelector(): HTMLElement {
 }
 
 function DlcSelector(): HTMLElement {
-  const container = document.createElement('div');
-  container.className = 'flex flex-col items-start gap-1 py-2 px-6'
+  const container = createContainer();
   
   const label = document.createElement('p')
   label.className = 'text-dc-gold text-sm text-left'
@@ -120,9 +130,6 @@ function DlcSelector(): HTMLElement {
 }
 
 function SpoilerProtectionToggle(): HTMLElement {
-  const container = document.createElement('div');
-  container.className = 'flex flex-col items-start justify-center gap-1 py-2 px-6'
-  
   const label = document.createElement('label')
   label.className = 'flex items-center gap-2 cursor-pointer w-fit'
 
@@ -139,9 +146,28 @@ function SpoilerProtectionToggle(): HTMLElement {
 
   label.appendChild(checkbox)
   label.appendChild(span)
-  container.appendChild(label)
+  return label;
+}
 
-  return container;
+function ViewStrategyToggle(): HTMLElement {
+  const label = document.createElement('label')
+  label.className = 'flex items-center gap-2 cursor-pointer w-fit'
+
+  const checkbox = document.createElement('input')
+  checkbox.type = 'checkbox'
+  checkbox.id = 'view-strategy'
+  checkbox.name = 'view-strategy'
+  checkbox.className = 'checkbox-dc'
+  checkbox.checked = viewService.getStrategy() == ViewStrategy.Dynamic;
+  checkbox.disabled = true;
+
+  const span = document.createElement('span')
+  span.className = 'text-dc-gold text-sm'
+  span.textContent = 'Advanced Mode'
+
+  label.appendChild(checkbox)
+  label.appendChild(span)
+  return label;
 }
 
 function ActionButtons(form: HTMLFormElement): HTMLElement {
@@ -189,6 +215,9 @@ function ActionButtons(form: HTMLFormElement): HTMLElement {
     const spoilerCheckbox = form.querySelector('input[name="spoiler-protection"]') as HTMLInputElement;
     spoilerCheckbox.checked = savedState.spoilerProtection;
     
+    const viewStrategy = form.querySelector('input[name="view-strategy"]') as HTMLInputElement;
+    viewStrategy.checked = savedState.viewStrategy == ViewStrategy.Dynamic;
+
     updateButtonStates();
   })
 
@@ -207,11 +236,16 @@ export function ControlPanel(): HTMLElement {
   const difficultySelector = DifficultySelector()
   const dlcSelector = DlcSelector()
   const spoilerToggle = SpoilerProtectionToggle()
+  const viewStrategyToggle = ViewStrategyToggle()
   const actionButtons = ActionButtons(form)
+
+  const checkboxContainer = createContainer();
+  checkboxContainer.appendChild(spoilerToggle);
+  checkboxContainer.appendChild(viewStrategyToggle);
 
   form.appendChild(difficultySelector)
   form.appendChild(dlcSelector)
-  form.appendChild(spoilerToggle)
+  form.appendChild(checkboxContainer)
   form.appendChild(actionButtons)
 
   form.addEventListener('submit', (e) => {
@@ -227,6 +261,7 @@ export function ControlPanel(): HTMLElement {
       }
     });
     formState.spoilerProtection? spoilerProtectionService.enable(): spoilerProtectionService.disable();
+    formState.viewStrategy? viewService.setStrategy(ViewStrategy.Dynamic): viewService.setStrategy(ViewStrategy.Static);
     
     console.log('Settings applied:', formState)
     eventEmitter.emit('control-panel-reset', formState);

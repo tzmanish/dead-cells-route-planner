@@ -1,16 +1,14 @@
 import type { ScrollCount } from "../models/Biome";
 import { biomeLevelService } from "./BiomeLevelService";
-import type { BiomeService } from "./BiomeService";
+import { biomeService } from "./BiomeService";
 import { difficultyService } from "./DifficultyService";
 import { dlcService } from "./DLCService";
 
-export class RouteService {
-    private biomeService: BiomeService;
+class RouteService {
     private nextLevelMap: Map<string, string>;
     private commulativeScrollCountMap: Map<string, ScrollCount>;
 
-    constructor(biomeService: BiomeService) {
-        this.biomeService = biomeService;
+    constructor() {
         this.nextLevelMap = new Map();
         this.commulativeScrollCountMap = new Map();
         this.recalculate();
@@ -46,10 +44,10 @@ export class RouteService {
         const levels = biomeLevelService.getAll();
         const difficulty = difficultyService.getCurrent();
         for(let i=levels.length-1; i>=0; i--) {
-            const biomes = this.biomeService.getBiomesByLevel(levels[i]).map(b => this.biomeService.getBiomeObject(b)).filter(b => b !== undefined);
+            const biomes = biomeService.getBiomesByLevel(levels[i]).map(b => biomeService.getBiomeObject(b)).filter(b => b !== undefined);
             dlcService.filterByEnabledDLCs(biomes).forEach(biome => {
                 if(biome) {
-                    const exits_all = biome.exits[difficulty].map(e=>this.biomeService.getBiomeObject(e)).filter(e=>e!==undefined);
+                    const exits_all = biome.exits[difficulty].map(e=>biomeService.getBiomeObject(e)).filter(e=>e!==undefined);
                     const exits = dlcService.filterByEnabledDLCs(exits_all);
                     let prefferedExit = null;
                     if(exits.length > 0) {
@@ -75,3 +73,5 @@ export class RouteService {
         }
     }
 }
+
+export const routeService = new RouteService();

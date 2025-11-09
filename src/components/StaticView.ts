@@ -1,73 +1,21 @@
-import type { BiomeService } from "../services/BiomeService";
 import { biomeLevelService } from "../services/BiomeLevelService";
 import { BiomeLevel } from "../models/BiomeLevel";
-import { RouteService } from "../services/RouteService";
 import { difficultyService } from "../services/DifficultyService";
 import { eventEmitter } from "../services/EventEmitterService";
 import { dlcService } from "../services/DLCService";
 import { BiomeType } from "../models/Biome";
 import { spoilerProtectionService } from "../services/SpoilerProtectionService";
 import { reposition } from 'nanopop';
-
-declare global {
-    interface Window {
-        LeaderLine: any;
-        AnimEvent: any;
-    }
-}
-
-function loadLeaderLine(): Promise<void> {
-    return new Promise((resolve, reject) => {
-        if (window.LeaderLine && window.AnimEvent) {
-            resolve();
-            return;
-        }
-        
-        const loadScript = (src: string): Promise<void> => {
-            return new Promise((res, rej) => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.onload = () => res();
-                script.onerror = () => rej(new Error(`Failed to load ${src}`));
-                document.head.appendChild(script);
-            });
-        };
-
-        Promise.all([
-            window.AnimEvent ? Promise.resolve() : loadScript(`${import.meta.env.BASE_URL}anim-event.min.js`),
-            window.LeaderLine ? Promise.resolve() : loadScript(`${import.meta.env.BASE_URL}leader-line.min.js`)
-        ])
-        .then(() => resolve())
-        .catch(reject);
-    });
-}
-
-function clearLeaderLines() {
-    svgWrapper?.remove();
-}
-
-function repositionLeaderLines(parent: HTMLElement) {
-    const rectWrapper = parent.getBoundingClientRect();
-    if(svgWrapper) svgWrapper.style.transform = `translate(${-rectWrapper.left - window.pageXOffset}px, ${-rectWrapper.top - window.pageYOffset}px)`;
-}
-
-function initLeaderLine(parent: HTMLElement) {
-    clearLeaderLines();
-    svgWrapper = document.createElement('div');
-    svgWrapper.className = 'w-0 h-0 absolute top-0 left-0 z-100'
-    parent.appendChild(svgWrapper);
-    repositionLeaderLines(parent);
-}
+import { biomeService } from "../services/BiomeService";
+import { routeService } from "../services/RouteService";
+import { leaderLine } from "../utils/LeaderLine";
 
 function darkenedBackground(link: string):string {
     return `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(${link})`;
 }
 
 let routePanelElement: HTMLElement | null = null;
-let svgWrapper: HTMLElement | null = null;
 const biomeDomElements = new Map<string, HTMLElement>();
-let biomeService: BiomeService;
-let routeService: RouteService;
 let popper: HTMLElement;
 
 function showPopper(element: HTMLElement, textContent: string) {
@@ -82,44 +30,29 @@ function showPopper(element: HTMLElement, textContent: string) {
 export function resetRoutePanel() {
     routeService.recalculate();
 
-    loadLeaderLine().then(() => {
-        if(routePanelElement) initLeaderLine(routePanelElement);
-        
-        const entryBiome = biomeService.getBiomesByLevel(BiomeLevel.L1)[0];
-        let current = entryBiome;
-        let e_current = biomeDomElements.get(current);
-        let next = routeService.getNextBiome(current);
-        let e_next = biomeDomElements.get(next||"");
+    if(routePanelElement) leaderLine.reset(routePanelElement);
+    
+    const entryBiome = biomeService.getBiomesByLevel(BiomeLevel.L1)[0];
+    let current = entryBiome;
+    let e_current = biomeDomElements.get(current);
+    let next = routeService.getNextBiome(current);
+    let e_next = biomeDomElements.get(next||"");
 
-        while(next) {
-            const line = new window.LeaderLine(
-                e_current, 
-                e_next,
-                {startSocket: 'bottom', endSocket: 'top', color: '#f9cf87', size: 1.2, path: 'grid'}
-            );
+    while(next) {
+        if(e_current && e_next) leaderLine.create(e_current, e_next, {
+            startSocket: 'bottom', 
+            endSocket: 'top', 
+            color: '#f9cf87', 
+            size: 1.2, 
+            path: 'grid'
+        });
 
-            const elmLine = document.querySelector('body > .leader-line:last-child');
-            if (elmLine && svgWrapper) {
-                svgWrapper.appendChild(elmLine);
-            }
-
-            e_current?.parentElement?.addEventListener('scroll', window.AnimEvent.add(() =>  line.position()), false);
-            e_next?.parentElement?.addEventListener('scroll', window.AnimEvent.add(() =>  line.position()), false);
-            eventEmitter.on('route-panel-reset', ()=>{
-                e_current?.parentElement?.removeEventListener('scroll', window.AnimEvent.add(() =>  line.position()));
-                e_next?.parentElement?.removeEventListener('scroll', window.AnimEvent.add(() =>  line.position()));
-            });
-
-            e_next?.scrollIntoView();
-
-            e_current = e_next;
-            next = routeService.getNextBiome(next);
-            e_next = biomeDomElements.get(next||"");
-        }
-        window.scrollTo(0, 0);
-    }).catch(err => {
-        console.error('Failed to load or use LeaderLine:', err);
-    });
+        e_next?.scrollIntoView();
+        e_current = e_next;
+        next = routeService.getNextBiome(next);
+        e_next = biomeDomElements.get(next||"");
+    }
+    window.scrollTo(0, 0);
 
     biomeDomElements.forEach((biomeDom, biome) => {
         const biomeObj = biomeService.getBiomeObject(biome);
@@ -251,13 +184,11 @@ function createLevelDom(level: BiomeLevel): HTMLElement {
     return levelDom;
 }
 
-export function RoutePanel(_biomeService: BiomeService): HTMLElement {
+export function RoutePanel(): HTMLElement {
     const panel = document.createElement('div');
     routePanelElement = panel;
     routePanelElement.className = 'p-4 relative overflow-hidden';
-    
-    biomeService = _biomeService;
-    routeService = new RouteService(biomeService);
+
     biomeService.getAllBiomes().forEach(b => biomeDomElements.set(b, createBiomeDom(b)));
     biomeLevelService.getAll().forEach(l => {
         const levelDom = createLevelDom(l);
@@ -269,8 +200,8 @@ export function RoutePanel(_biomeService: BiomeService): HTMLElement {
     popper.hidden = true;
     routePanelElement.appendChild(popper);
     
-    resetRoutePanel();
     eventEmitter.on('control-panel-reset', resetRoutePanel);
-    window.onresize = () => repositionLeaderLines(routePanelElement!);
+    window.onresize = () => leaderLine.reposition(routePanelElement!);
+    requestAnimationFrame(resetRoutePanel);
     return panel;
 }
