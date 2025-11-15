@@ -34,11 +34,11 @@ export class DynamicView implements ViewRenderer {
         this.choicePanel = document.createElement('div');
         this.choicePanel.className = 'flex flex-wrap justify-center p-4';
 
-        const resetButton = document.createElement('button');
-        resetButton.title = 'Reset';
-        resetButton.className = 'icon-[majesticons--reload-circle] m-0 p-0 text-5xl fixed bottom-[120px] right-[80px] z-100 btn-dc-primary';
-        resetButton.onclick = this.refreshHandler;
-        this.routePanelElement.appendChild(resetButton);
+        // const resetButton = document.createElement('button');
+        // resetButton.title = 'Reset';
+        // resetButton.className = 'icon-[majesticons--reload-circle] m-0 p-0 text-5xl fixed bottom-[120px] right-[80px] z-100 btn-dc-primary';
+        // resetButton.onclick = this.refreshHandler;
+        // this.routePanelElement.appendChild(resetButton);
         this.routePanelElement.appendChild(this.breadcrumb);
         this.routePanelElement.appendChild(this.choicePanel);
 
